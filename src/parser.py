@@ -134,7 +134,7 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
 
     def visitBin_op(self, ctx: HybLangParser.Bin_opContext):
         child = self.visitChildren(ctx)
-        return {"op": (child or [""])[0]}
+        return {"op": (child or [""])}
 
     def visitFunction_call(self, ctx: HybLangParser.Function_callContext):
         children = non_terminal_children(ctx)

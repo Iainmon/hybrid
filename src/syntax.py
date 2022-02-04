@@ -9,9 +9,14 @@ class NonStatement(AST):
     pass
 
 @dataclass
-class Block():
+class Block(AST):
     procedure : list[Statement | NonStatement]
 
+@dataclass
+class Definitions(AST):
+    body : Block
+
+    
 # -------- Expression (start) --------
 class Expression(Statement):
     pass
@@ -64,11 +69,11 @@ class SetLiteral(AST):
 
 # -------- NonStatement (start) --------
 @dataclass
-class FunctionArgument():
+class FunctionArgument(AST):
     arg_id : str
-    arg_type : SetLiteral
+    arg_type : Optional[SetLiteral]
 @dataclass
-class FunctionArguments():
+class FunctionArguments(AST):
     args : list[tuple[int, FunctionArgument]]
 
 @dataclass
@@ -111,7 +116,7 @@ def construct_ast(parse_tree) -> Any:
             return Return(construct_ast(expr))
         case {'fun_call': {'fun': name, 'args': args}}:
             return FunctionCall(name,[construct_ast(a) for a in args])
-        case {'fun_def': {'fun_name': name, 'args': args, 'block': block}}:
+        case {'fun_def': {'fun_name': {'id': name}, 'args': args, 'block': block}}:
             return FunctionDefinition(name, FunctionArguments([(n,construct_ast(a)) for n,a in args]), construct_ast(block))
         case {'bin_op': {'op': op, 'lhs': lhs, 'rhs': rhs}}:
             return BinaryOperation(construct_ast(lhs),op,construct_ast(rhs))
@@ -121,12 +126,13 @@ def construct_ast(parse_tree) -> Any:
             return Block([construct_ast(inst) for inst in instructions])
         case {'program' : program}:
             return construct_ast(program)
-        case {'calling_program_def': {'name': name, 'body': block}}:
+        case {'calling_program_def': {'name': {'id': name}, 'body': block}}:
             return CallingProgramDefinition(name, construct_ast(block))
-        case {'library_def': {'name': name, 'body': block}}:
+        case {'library_def': {'name': {'id': name}, 'body': block}}:
             return LibraryDefinition(name, [], construct_ast(block))
         case x if type(x) is list:
-            return [construct_ast(y) for y in x]
+            return Block([construct_ast(y) for y in x])
         case _:
             print('Failed!', parse_tree)
             return parse_tree
+    
