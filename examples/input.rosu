@@ -1,0 +1,23 @@
+pro [A] : {
+    m <- {0,1};
+    c <- ctxt(m);
+    k := 0;
+
+    return c is k;
+}
+
+lib [L] : {
+    rout ctxt(m : {0,1}) : {
+        k <- {0,1};
+        c := k xor m;
+        return c;
+    }
+}
+lib [R] : {
+    rout ctxt(m : {0,1}) : {
+        c <- {0,1};
+        return c;
+    }
+}
+
+
