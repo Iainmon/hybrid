@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from pyclbr import Function
 from typing import Any, Optional
 
 class AST():
@@ -16,7 +17,7 @@ class Block(AST):
 class Definitions(AST):
     body : Block
 
-    
+
 # -------- Expression (start) --------
 class Expression(Statement):
     pass
@@ -63,9 +64,18 @@ class Return(Statement):
     ret : Expression
 # -------- Statement (end) --------
 
+class SetAtom(AST):
+    pass
+@dataclass
+class NumberSetAtom(SetAtom):
+    num : int
+@dataclass
+class IdentifierSetAtom(SetAtom):
+    id : str
+
 @dataclass
 class SetLiteral(AST):
-    data : str
+    data : list[SetAtom]
 
 # -------- NonStatement (start) --------
 @dataclass
@@ -112,16 +122,24 @@ def construct_ast(parse_tree) -> Any:
             return Assignment(construct_ast(lhs), construct_ast(rhs))
         case {'sample': {'lhs': lhs, 'rhs': rhs}}:
             return Sample(construct_ast(lhs), construct_ast(rhs))
-        case {'return': expr}:
+        case {'if': {'condition': condition, 'block': block}}:
+            return IfStatement(construct_ast(condition),construct_ast({'block': block}),None)
+        case {'return': expr}:            
             return Return(construct_ast(expr))
         case {'fun_call': {'fun': name, 'args': args}}:
             return FunctionCall(name,[construct_ast(a) for a in args])
+        case {'arg_def': {'id': name, 'type': arg_type}}:
+            return FunctionArgument(name,construct_ast(arg_type))
         case {'fun_def': {'fun_name': {'id': name}, 'args': args, 'block': block}}:
             return FunctionDefinition(name, FunctionArguments([(n,construct_ast(a)) for n,a in args]), construct_ast(block))
         case {'bin_op': {'op': op, 'lhs': lhs, 'rhs': rhs}}:
             return BinaryOperation(construct_ast(lhs),op,construct_ast(rhs))
-        case {'set_literal': s}:
-            return SetLiteral(s)
+        case {'set_literal': {'atom_list': atom_list}}:
+            return SetLiteral([construct_ast(atom) for atom in atom_list])
+        case {'set_atom': {'num': n}}:
+            return NumberSetAtom(n)
+        case {'set_atom': {'char': c}}:
+            return IdentifierSetAtom(c)
         case {'block': instructions}:
             return Block([construct_ast(inst) for inst in instructions])
         case {'program' : program}:

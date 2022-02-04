@@ -102,7 +102,16 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
         }
 
     def visitSet_type(self, ctx: HybLangParser.Set_typeContext):
+        if ctx.set_lit():
+            children = non_terminal_children(ctx)
+            return {"set_literal": {"atom_list": [self.visit(c) for c in children]}}
         return {"set_literal": ctx.getText()}
+
+    def visitSet_lit(self, ctx: HybLangParser.Set_litContext):
+        if ctx.IDENTIFIER():
+            return {"set_atom": {"char": self.visit(ctx.IDENTIFIER())["id"]}}
+        else:
+            return {"set_atom": {"num": self.visit(ctx.NUMBER())["num"]}}
 
     def visitExpression(self, ctx: HybLangParser.ExpressionContext):
         children = list(ctx.children or [])
@@ -149,20 +158,22 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
         return {"return": self.visit(ctx.expression())}
 
     def visitFunction_arguments(self, ctx: HybLangParser.Function_argumentsContext):
-        children = non_terminal_children(ctx)
+        children = non_terminal_children(ctx) or []
         args = list(map(self.visit, children))
         return list(enumerate(args))
 
     def visitFunction_argument(self, ctx: HybLangParser.Function_argumentContext):
         if ctx.set_type():
             return {
-                "id": self.visit(ctx.IDENTIFIER())["id"],
-                "type": self.visit(ctx.set_type()),
+                "arg_def": {
+                    "id": self.visit(ctx.IDENTIFIER())["id"],
+                    "type": self.visit(ctx.set_type()),
+                }
             }
         return self.visit(ctx.IDENTIFIER())
 
     def visitFunction_def(self, ctx: HybLangParser.Function_defContext):
-        args = self.visit(ctx.function_arguments())
+        args = self.visit(ctx.function_arguments()) if ctx.function_arguments() else []
         name = self.visit(ctx.IDENTIFIER())
         block = self.visit(ctx.block())
         return {
@@ -188,7 +199,7 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
         return {
             "if": {
                 "condition": self.visit(ctx.expression()),
-                "block": self.visit(ctx.block())["block"],
+                "block": self.visit((ctx.block() or [])[0])["block"],
             }
         }
         return super().visitIf_stmt(ctx)

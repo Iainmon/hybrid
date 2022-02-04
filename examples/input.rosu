@@ -21,3 +21,35 @@ lib [R] : {
 }
 
 
+lib [real] : {
+    rout query() : {
+        s <- {0,1};
+        return H(s);
+    }
+}
+
+lib [rand] : {
+    rout query() : {
+        r <- {0,1};
+        return r;
+    }
+}
+
+lib [left] : {
+    rout abab(x : {'a','b'}) : {
+        y <- {'a','b'};
+        z <- {'a','b'};
+        w := z + y + z;
+        if 1 is 1 then : {
+            return w;
+        }
+        return w;
+    }
+}
+lib [right] : {
+    rout abab(x : {'a','b'}) : {
+        y <- {'a','b'};
+        z <- {'a','b'};
+        return z + y + z;;
+    }
+}
