@@ -18,12 +18,18 @@ tex_source = latex.texify(syntax.Definitions(ast))
 print('\n\n------ Latex Source ------\n')
 print(tex_source)
 
+source = ''
 print('\n\n------ Latex Definitions ------\n')
 progA = definition_calling_programs(ast)[0]
 libs = definition_libraries(ast)
 for lib in libs:
     print(f'&{latex.link(progA,lib,glowing=True)}\\\\')
+    source += f'&{latex.link(progA,lib,glowing=True)}\\\\'
 
+source = ''
 print('\n\n------ Equivalences Definitions ------\n')
 for i in range(0,len(libs)-1,2):
     print(latex.equiv(libs[i],libs[i+1],align=True) + '\\\\')
+    source += latex.equiv(libs[i],libs[i+1]) + '\\implies&' +f'{latex.link(progA,libs[i],glowing=True)}\\equiv {latex.link(progA,libs[i+1],glowing=True)}' + '\\\\'
+
+latex.save_file(source,'output.pdf')

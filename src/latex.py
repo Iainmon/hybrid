@@ -1,6 +1,7 @@
 
 from syntax import *
-
+import os
+import tempfile
 
 
 # def latexify(ast):
@@ -37,7 +38,7 @@ def texify(ast: AST) -> str:
         case NumberSetAtom(n):
             if n == 0 or n == 1:
                 return f'\\bit{n}'
-            return str(n)
+            return f'\\bit{n}'
         case IdentifierSetAtom(c):
             return '\\str{' + c + '}'
         case Return(expr):
@@ -83,3 +84,19 @@ def equiv(left: AST, right: AST,align=False) -> str:
     if align:
         return f'{texify(left)}' + '&\\equiv' + f'{texify(right)}'
     return f'{texify(left)}\\equiv{texify(right)}'
+
+
+
+
+
+
+def save_file(tex_source,file):
+    pf = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../tex/prelude.tex'), 'r')
+    prelude = pf.read()
+    source = prelude + '\\begin{document}\\maketitle\\begin{align*}' + tex_source + '\\end{align*}\\end{document}'
+    output_tex_file = os.path.join(os.path.abspath(os.getcwd()),'../tex/temp_out.tex')
+    f = open(output_tex_file,'w')
+    f.write(source)
+    f.close()
+    inputted_path = output_tex_file
+    os.system("cd ../tex; pdflatex %s" % inputted_path)

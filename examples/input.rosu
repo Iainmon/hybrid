@@ -1,9 +1,8 @@
 pro [A] : {
     m <- {0,1};
-    c <- ctxt(m);
-    k := 0;
-
-    return c is k;
+    c := ctxt(m);
+    j <- {'a','b','c'};
+    return c xor k || j;
 }
 
 lib [L] : {
@@ -36,20 +35,21 @@ lib [rand] : {
 }
 
 lib [left] : {
-    rout abab(x : {'a','b'}) : {
-        y <- {'a','b'};
-        z <- {'a','b'};
-        w := z + y + z;
-        if 1 is 1 then : {
+    rout ctxt(x: {0,1}) : {
+        y <- {0,1};
+        z <- {0,1};
+        w := x + y + z;
+        q := Mod(w,2);
+        if (q xor q) is 0 then : {
             return w;
         }
         return w;
     }
 }
 lib [right] : {
-    rout abab(x : {'a','b'}) : {
-        y <- {'a','b'};
-        z <- {'a','b'};
-        return z + y + z;;
+    rout ctxt(x: {0,1}) : {
+        y <- {0,1};
+        z <- {0,1};
+        return x + y + z;
     }
 }

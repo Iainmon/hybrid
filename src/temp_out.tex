@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage{mikerosu}
+% \usepackage[a2paper, margin=4cm]{geometry}
+% \usepackage[a3paper, margin=2cm]{geometry}
+\usepackage[a4paper]{geometry}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{amsthm}
+\usepackage{marvosym}
+\newtheorem{theorem}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{construction}{Construction}
+
+\title{CS 427 Final Project Proposal}
+\author{Iain Moncrief \& Nick Burrell}
+\date{February 2022}
+%%%%
+
+
+\begin{document}\maketitle\begin{align*}\titlecodebox{\fancy{A} }{$m \lar \{\bit0,\bit1\}$\\$c \lar \subname{ctxt}(m)$\\$k := 0$\\return $c \overset{?}{=} k$}\quad\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m\in \Bin):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c$}\quad\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m\in \Bin):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\quad\titlecodebox{ \lib{real} }{\underline{$\subname{query}():$}\\\> $s \lar \{\bit0,\bit1\}$\\\> return $H(s)$}\quad\titlecodebox{ \lib{rand} }{\underline{$\subname{query}():$}\\\> $r \lar \{\bit0,\bit1\}$\\\> return $r$}\quad\titlecodebox{ \lib{left} }{\underline{$\subname{abab}(x\in \Bin):$}\\\> $y \lar \{\str{a},\str{b}\}$\\\> $z \lar \{\str{a},\str{b}\}$\\\> $w := z + y + z$\\\> if $1 \overset{?}{=} 1$ then:\\\>\> return $w$\\\> return $w$}\quad\titlecodebox{ \lib{right} }{\underline{$\subname{abab}(x\in \Bin):$}\\\> $y \lar \{\str{a},\str{b}\}$\\\> $z \lar \{\str{a},\str{b}\}$\\\> return $z + y + z$}\end{align*}\end{document}

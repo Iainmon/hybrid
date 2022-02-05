@@ -1,0 +1,215 @@
+\ProvidesPackage{mikerosu}
+
+% \documentclass[11pt]{article}
+\RequirePackage[utf8]{inputenc}
+
+\RequirePackage{xspace,graphicx,amsmath,amssymb,xcolor,color}
+
+% \RequirePackage{mathpazo}
+
+\RequirePackage{sourcecodepro}
+\RequirePackage{fontenc}
+
+
+%% operators
+
+\newcommand{\pct}{\mathbin{\%}}
+% makes ":=" aligned better
+\RequirePackage{mathtools}
+\mathtoolsset{centercolon}
+
+% indistinguishability operator
+% http://tex.stackexchange.com/questions/22168/triple-approx-and-triple-approx-with-a-straight-middle-line
+\newcommand{\indist}{  \mathrel{\vcenter{\offinterlineskip
+  \hbox{$\sim$}\vskip-.35ex\hbox{$\sim$}\vskip-.35ex\hbox{$\sim$}}}}
+\renewcommand{\cong}{\indist}
+
+
+
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\Enc}{\text{\sf Enc}}
+\newcommand{\Dec}{\text{\sf Dec}}
+\newcommand{\KeyGen}{\text{\sf KeyGen}}
+\newcommand{\Share}{\text{\sf Share}}
+\newcommand{\Reconstruct}{\text{\sf Reconstruct}}
+\newcommand{\fname}[1]{\text{\sf #1}}
+\newcommand{\bdp}{\text{\sf BirthdayProb}}
+
+
+% fancy script L
+\RequirePackage[mathscr]{euscript}
+\renewcommand{\L}{\ensuremath{\mathscr{L}}\xspace}
+\newcommand{\lib}[1]{\ensuremath{\L_{\textsf{#1}}}\xspace}
+\newcommand{\hyprog}[1]{\ensuremath{\A_{\textsf{#1}}}\xspace}
+
+
+\newcommand{\myterm}[1]{\ensuremath{\text{#1}}\xspace}
+\newcommand{\bias}{\myterm{bias}}
+\newcommand{\link}{\diamond}
+\newcommand{\subname}[1]{\ensuremath{\textsc{#1}}\xspace}
+
+
+
+%% colors
+\definecolor{highlightcolor}{HTML}{F5F5A4}
+\definecolor{highlighttextcolor}{HTML}{000000}
+\definecolor{bitcolor}{HTML}{a91616}
+
+
+%%% boxes for writing libraries/constructions
+\RequirePackage{varwidth}
+
+\newcommand{\codebox}[1]{%
+        \begin{varwidth}{\linewidth}%
+        \begin{tabbing}%
+            ~~~\=\quad\=\quad\=\quad\=\kill % initialize tabstops
+            #1
+        \end{tabbing}%
+        \end{varwidth}%
+}
+\newcommand{\titlecodebox}[2]{%
+    \fboxsep=0pt%
+    \fcolorbox{black}{black!10}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        \colorbox{black!10}{#1} \\
+        \colorbox{white}{\codebox{#2}}%
+        \end{varwidth}%
+    }
+}
+\newcommand{\fcodebox}[1]{%
+    \framebox{\codebox{#1}}%
+}
+% \newcommand{\fhlcodebox}[1]{%
+%     %\fcolorbox{black}{highlightcolor}{\codebox{#1}}%
+%     \fcolorbox{black}{highlightcolor}{\codebox{#1}}
+% }
+\newcommand{\hlcodebox}[1]{%
+    \fcolorbox{black!0}{highlightcolor}{\codebox{#1}}%
+}
+
+\newcommand{\mfcodebox}[1]{%
+    \fboxsep=0pt%
+    \fcolorbox{black}{black!10}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        % \colorbox{black!10}{#1} \\
+        \colorbox{white}{\codebox{#1}}%
+        \end{varwidth}%
+    }
+}
+\newcommand{\fhlcodebox}[1]{%
+    \fboxsep=0pt%
+    \fcolorbox{black}{black!10}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        % \colorbox{black!10}{#1} \\
+        \colorbox{highlightcolor}{\codebox{#1}}%
+        \end{varwidth}%
+    }
+}
+
+\newcommand{\glowingcodebox}[1]{%
+    \fboxsep=4pt%
+    \fcolorbox{black!0}{highlightcolor}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        % \colorbox{black!10}{#1} \\
+        \fcolorbox{black}{white}{\codebox{#1}}%
+        \end{varwidth}%
+    }
+}
+\newcommand{\glowingbox}[1]{%
+    \fboxsep=4pt%
+    \fcolorbox{black!0}{highlightcolor}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        % \colorbox{black!10}{#1} \\
+        % \fcolorbox{black}{white}{\codebox{#1}}%
+        #1%
+        \end{varwidth}%
+    }
+}
+
+\newcommand{\highlightmany}[1]{%
+        \tabcolsep=0pt%
+        \hspace*{-\fboxsep}\basehighlight{\begin{tabular}{l}#1\end{tabular}}%
+}
+
+\newcommand{\hltitlecodebox}[2]{%
+    \fboxsep=0pt%
+    \fcolorbox{black}{black!15!highlightcolor}{%
+        \begin{varwidth}{\linewidth}%
+        \centering%
+        \fboxsep=3pt%
+        \colorbox{black!15!highlightcolor}{\color{highlighttextcolor}#1} \\
+        \colorbox{highlightcolor}{\color{highlighttextcolor}\codebox{#2}}%
+        \end{varwidth}%
+    }
+}
+
+\newcommand{\comment}[1]{%
+    \begin{minipage}{.2\textwidth}%
+    #1%
+    \end{minipage}%
+}
+
+
+%% highlighting
+\newcommand{\basehighlight}[1]{\colorbox{highlightcolor}{\color{highlighttextcolor}#1}}
+\newcommand{\mathhighlight}[1]{\basehighlight{$#1$}}
+\newcommand{\highlight}[1]{\raisebox{0pt}[-\fboxsep][-\fboxsep]{\basehighlight{#1}}}
+\newcommand{\highlightline}[1]{%\raisebox{0pt}[-\fboxsep][-\fboxsep]{
+    \hspace*{-\fboxsep}\basehighlight{#1}%
+%}
+}
+
+%% bits
+\newcommand{\bit}[1]{\textcolor{bitcolor}{\texttt{\upshape #1}}}
+\newcommand{\bits}{\{\bit0,\bit1\}}
+
+\newcommand{\str}[1]{\textcolor{bitcolor}{\texttt{\upshape #1}}}
+\newcommand{\Prt}[1][\str{null}]{{\text{Pr}[\text{#1}]}}
+\def\sbuilder#1#2{{\{#1 \ | \ #2\}}}
+\def\scomp#1{{\overline{#1}}}
+% \newcommand{\str}[1]{\textcolor{Maroon}{\tt{#1}}}
+
+
+
+\def\sbuilder#1#2{{\{#1 \ | \ #2\}}}
+% \def\Setof#1{{\left\{#1\right\}}}\\
+\newcommand{\Setof}[1]{{\left\{#1\right\}}}
+\def\scomp#1{{\overline{#1}}}
+\renewcommand{\Pr}[1][\str{null}]{\text{Pr}\left[ #1 \right]}
+\newcommand{\Bin}[0]{{\left\{\str{0},\str{1}\right\}}}
+\newcommand{\LetIn}[2]{\textbf{let} \ #1 \ \textbf{in}\ #2\ }
+\def\lam{{\lambda}}
+\def\tx#1{{\text{#1}}}
+\def\mc#1{{\mathcal{#1}}}
+\newcommand{\fancy}[1]{\ensuremath{\mathscr{#1}}\xspace}
+\def\A{\fancy{A}}
+\def\P{{\mathcal{P}}}
+\def\true{{\str{true}}}
+\def\false{{\str{false}}}
+\def\Bool{{\Setof{\true,\false}}}
+\def\lar{{\ \leftarrow\, }}
+\def\rfar{\Rightarrow}
+\def\sc#1{\dosc#1\csod}
+\def\dosc#1#2\csod{{\rm #1{\small #2}}}
+\def\Binl{\Bin^\lambda}
+\def\Binin{\Bin^{\textsf{in}}}
+\def\Binout{\Bin^{\textsf{out}}}
+\def\mfin{\textsf{in}}
+\def\mfout{\textsf{out}}
+
+%%%%

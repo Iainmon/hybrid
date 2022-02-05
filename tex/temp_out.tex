@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage{mikerosu}
+% \usepackage[a2paper, margin=4cm]{geometry}
+\usepackage[a3paper, margin=2cm]{geometry}
+% \usepackage[a4paper]{geometry}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{amsthm}
+\usepackage{marvosym}
+\newtheorem{theorem}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{construction}{Construction}
+
+\title{\LaTeX   Rendering}
+\author{}
+\date{February 2022}
+%%%%
+
+
+\begin{document}\maketitle\begin{align*}\titlecodebox{ \lib{left} }{\underline{$\subname{ctxt}(x\in \Bin):$}\\\> $y \lar \{\bit0,\bit1\}$\\\> $z \lar \{\bit0,\bit1\}$\\\> $w := x + y + z$\\\> $q := \subname{Mod}(w, 2)$\\\> if $q \oplus q \overset{?}{=} 0$ then:\\\>\> return $w$\\\> return $w$}\equiv\titlecodebox{ \lib{right} }{\underline{$\subname{ctxt}(x\in \Bin):$}\\\> $y \lar \{\bit0,\bit1\}$\\\> $z \lar \{\bit0,\bit1\}$\\\> return $x + y + z$}\implies&\titlecodebox{\fancy{A} }{$m \lar \{\bit0,\bit1\}$\\$c := \subname{ctxt}(m)$\\$j \lar \{\str{a},\str{b},\str{c}\}$\\return $c \oplus k || j$}\link\glowingbox{\titlecodebox{ \lib{left} }{\underline{$\subname{ctxt}(x\in \Bin):$}\\\> $y \lar \{\bit0,\bit1\}$\\\> $z \lar \{\bit0,\bit1\}$\\\> $w := x + y + z$\\\> $q := \subname{Mod}(w, 2)$\\\> if $q \oplus q \overset{?}{=} 0$ then:\\\>\> return $w$\\\> return $w$}}\equiv \titlecodebox{\fancy{A} }{$m \lar \{\bit0,\bit1\}$\\$c := \subname{ctxt}(m)$\\$j \lar \{\str{a},\str{b},\str{c}\}$\\return $c \oplus k || j$}\link\glowingbox{\titlecodebox{ \lib{right} }{\underline{$\subname{ctxt}(x\in \Bin):$}\\\> $y \lar \{\bit0,\bit1\}$\\\> $z \lar \{\bit0,\bit1\}$\\\> return $x + y + z$}}\\\end{align*}\end{document}
