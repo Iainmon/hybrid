@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  8 FEB 2022 09:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  8 FEB 2022 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -511,36 +511,45 @@ ceCodePro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 26.
- [1
+
+Underfull \hbox (badness 10000) detected at line 26
+ []
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 26
+ []
+ []
+
+[1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./temp_out.aux) ) 
 Here is how much of TeX's memory you used:
- 5206 strings out of 480608
- 71699 string characters out of 5903631
- 355126 words of memory out of 5000000
- 20993 multiletter control sequences out of 15000+600000
+ 5205 strings out of 480608
+ 71685 string characters out of 5903631
+ 325394 words of memory out of 5000000
+ 20992 multiletter control sequences out of 15000+600000
  550487 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,27n,70p,4159b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,23n,70p,1530b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/
 cm-super-t1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/sourcecodep
 ro/a_lutrty.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/sourcecod
 epro/SourceCodePro-Regular.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
-amsfonts/euler/eusm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/cm-super/sfcc1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
-cm-super/sfrm1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm
--super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
-er/sfss0800.pfb>
-Output written on temp_out.pdf (1 page, 138560 bytes).
+lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/amsfonts/euler/eusm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/cm-super/sfcc1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/c
+m-super/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-
+super/sfss0800.pfb>
+Output written on temp_out.pdf (1 page, 131398 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

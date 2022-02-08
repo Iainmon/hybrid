@@ -39,8 +39,22 @@ def bin_op_tex(op: str) -> str:
     if op in op_dict.keys():
         return op_dict[op]
     return op
+def texify_relation(relation: str) -> str:
+    rel_dict = {
+        '<>' : '\\link',
+        '==' : '\\equiv',
+        '~=' : '\\indist',
+    }
+    if relation in rel_dict.keys():
+        return rel_dict[relation]
+    return relation
 
-def texify(ast: AST) -> str:
+context = {
+    'library' : {},
+    'program' : {}
+}
+
+def texify(ast: AST,queries_only = True) -> str:
     match ast:
         case Identifier(id):
             return id
@@ -86,13 +100,31 @@ def texify(ast: AST) -> str:
             lines = [f'\\> {texify(stmt)}' for stmt in procedure]
             return '\\\\'.join(line for line in lines)
         case CallingProgramDefinition(name,Block(body)):
+            context['program'][name] = CallingProgramDefinition(name,Block(body))
             body_source = '\\\\'.join(texify(line) for line in body)
             return '\\titlecodebox{\\fancy{' + name + '} }{' + body_source + '}'
         case LibraryDefinition(name,exposing,Block(body)):
+            context['library'][name] = LibraryDefinition(name,exposing,Block(body))
             body_source = '\\\\'.join(texify(line) for line in body)
             return '\\titlecodebox{ \\lib{' + name + '} }{' + body_source + '}'
         case Definitions(Block(definitions)):
-            return '\\quad'.join(texify(line) for line in definitions)
+            if queries_only:
+                for line in definitions:
+                    texify(line) # populates context
+                return '&' + '\\quad'.join(texify(line) for line in definitions if isinstance(line,QueryStatement))
+            return '&' + '\\quad'.join(texify(line) for line in definitions)
+        case ProgramReference(name):
+            if name in context['program'].keys():
+                return texify(context['program'][name])
+            return '\\fancy{' + name + '}'
+        case LibraryReference(name):
+            if name in context['library'].keys():
+                return texify(context['library'][name])
+            return '\\lib{' + name + '}'
+        case ShowQueryStatement(expr):
+            return '\\\\&' + texify(expr)
+        case QueryRelation(lhs,relation,rhs):
+            return texify(lhs) + texify_relation(relation) + texify(rhs)
         case _:
             print('UNDEFINED', ast)
             return ''

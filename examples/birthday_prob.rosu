@@ -37,3 +37,7 @@ lib [david] : {
         return c;
     }
 }
+
+show lib[rand] == lib[rand] ~= lib[WeekFour].
+show pro[A] <> lib[rand].
+show (pro[A] <> lib[iain] <> lib[david] <> lib[rudy]) ~= lib[nick].
