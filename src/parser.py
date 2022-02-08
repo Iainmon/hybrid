@@ -204,6 +204,37 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
         }
         return super().visitIf_stmt(ctx)
 
+    def visitQuery_statement(self, ctx: HybLangParser.Query_statementContext):
+        return {"query": self.visit(ctx.show_query_statement())}
+
+    def visitShow_query_statement(self, ctx: HybLangParser.Show_query_statementContext):
+        return {"show_query": self.visit(ctx.query_expression())}
+
+    def visitQuery_relation(self, ctx: HybLangParser.Query_relationContext):
+        return {"relation": ctx.getText()}
+
+    def visitQuery_expression(self, ctx: HybLangParser.Query_expressionContext):
+        children = list(ctx.children or [])
+        visited = list(map(self.visit, children))
+        print(visited)
+        match visited:
+            case ["pro", _, identifier, _] | ["program", _, identifier, _]:
+                return {"pro": identifier}
+            case ["lib", _, identifier, _] | ["library", _, identifier, _]:
+                return {"lib": identifier}
+            case [lhs, {"relation": relation}, rhs]:
+                return {
+                    "query_relation": {"lhs": lhs, "relation": relation, "rhs": rhs}
+                }
+            case ['(',e,')']:
+                return e
+            case [{'id':name}]:
+                return {'id':name}
+            case _:
+                print('Failed!', visited)
+
+        # return super().visitQuery_expression(ctx)
+
     def aggregateResult(self, aggregate, nextResult):
         return nextResult
         return (aggregate or []) + [nextResult]

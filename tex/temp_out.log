@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 FEB 2022 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  8 FEB 2022 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,19 +448,19 @@ e
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a3paper
+* paper: a1paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 731.23584pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 1081.20474pt, 56.9055pt)
-* \paperwidth=845.04684pt
-* \paperheight=1195.01575pt
-* \textwidth=731.23584pt
-* \textheight=1081.20474pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
+* h-part:(L,W,R)=(113.81102pt, 1462.47165pt, 113.81102pt)
+* v-part:(T,H,B)=(113.81102pt, 2165.25473pt, 113.81102pt)
+* \paperwidth=1690.09369pt
+* \paperheight=2392.87677pt
+* \textwidth=1462.47165pt
+* \textheight=2165.25473pt
+* \oddsidemargin=41.54103pt
+* \evensidemargin=41.54103pt
+* \topmargin=4.54103pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -516,13 +516,13 @@ LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./temp_out.aux) ) 
 Here is how much of TeX's memory you used:
- 5213 strings out of 480608
- 71728 string characters out of 5903631
- 324446 words of memory out of 5000000
- 21000 multiletter control sequences out of 15000+600000
+ 5206 strings out of 480608
+ 71699 string characters out of 5903631
+ 355126 words of memory out of 5000000
+ 20993 multiletter control sequences out of 15000+600000
  550487 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,29n,70p,1435b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,27n,70p,4159b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/
 cm-super-t1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/sourcecodep
 ro/a_lutrty.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/sourcecod
@@ -537,7 +537,7 @@ cm-super/sfrm1095.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm
 -super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1728.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
 er/sfss0800.pfb>
-Output written on temp_out.pdf (1 page, 132516 bytes).
+Output written on temp_out.pdf (1 page, 138560 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream

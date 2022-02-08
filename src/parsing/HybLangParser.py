@@ -11,88 +11,108 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3+")
-        buf.write("\u00d1\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\61")
+        buf.write("\u00f7\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\3\2\3\2\3\3\3\3\3\4\3\4")
-        buf.write("\3\5\3\5\3\5\3\5\3\5\7\58\n\5\f\5\16\5;\13\5\5\5=\n\5")
-        buf.write("\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6I\n\6\3\6")
-        buf.write("\3\6\3\6\3\6\7\6O\n\6\f\6\16\6R\13\6\3\7\3\7\3\7\3\7\3")
-        buf.write("\b\3\b\3\b\3\b\5\b\\\n\b\3\t\3\t\3\t\3\n\3\n\3\n\3\n\5")
-        buf.write("\ne\n\n\3\13\3\13\3\13\6\13j\n\13\r\13\16\13k\7\13n\n")
-        buf.write("\13\f\13\16\13q\13\13\3\f\3\f\3\f\3\f\5\fw\n\f\3\r\3\r")
-        buf.write("\3\r\3\r\5\r}\n\r\3\16\3\16\3\16\3\16\7\16\u0083\n\16")
-        buf.write("\f\16\16\16\u0086\13\16\3\16\3\16\3\16\3\16\3\16\3\16")
-        buf.write("\5\16\u008e\n\16\3\17\3\17\3\17\5\17\u0093\n\17\3\20\3")
-        buf.write("\20\3\20\7\20\u0098\n\20\f\20\16\20\u009b\13\20\3\21\3")
-        buf.write("\21\3\21\3\21\5\21\u00a1\n\21\3\21\3\21\3\21\3\22\3\22")
-        buf.write("\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\23\5\23\u00b1")
+        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
+        buf.write("\t\31\4\32\t\32\3\2\3\2\3\3\3\3\3\4\3\4\3\5\3\5\3\5\3")
+        buf.write("\5\3\5\7\5@\n\5\f\5\16\5C\13\5\5\5E\n\5\3\5\3\5\3\6\3")
+        buf.write("\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6Q\n\6\3\6\3\6\3\6\3\6\7")
+        buf.write("\6W\n\6\f\6\16\6Z\13\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b")
+        buf.write("\5\bd\n\b\3\t\3\t\3\t\3\n\3\n\3\n\3\n\5\nm\n\n\3\13\3")
+        buf.write("\13\3\13\3\13\6\13s\n\13\r\13\16\13t\7\13w\n\13\f\13\16")
+        buf.write("\13z\13\13\3\f\3\f\3\f\3\f\5\f\u0080\n\f\3\r\3\r\3\r\3")
+        buf.write("\r\5\r\u0086\n\r\3\16\3\16\3\16\3\16\7\16\u008c\n\16\f")
+        buf.write("\16\16\16\u008f\13\16\3\16\3\16\3\16\3\16\3\16\3\16\5")
+        buf.write("\16\u0097\n\16\3\17\3\17\3\17\5\17\u009c\n\17\3\20\3\20")
+        buf.write("\3\20\7\20\u00a1\n\20\f\20\16\20\u00a4\13\20\3\21\3\21")
+        buf.write("\3\21\3\21\5\21\u00aa\n\21\3\21\3\21\3\21\3\22\3\22\3")
+        buf.write("\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\23\5\23\u00ba")
         buf.write("\n\23\3\24\3\24\3\24\3\24\3\24\3\24\3\25\3\25\3\25\3\25")
-        buf.write("\3\25\7\25\u00be\n\25\f\25\16\25\u00c1\13\25\3\26\3\26")
-        buf.write("\3\26\3\26\3\26\3\26\3\26\5\26\u00ca\n\26\3\26\5\26\u00cd")
-        buf.write("\n\26\3\26\3\26\3\26\2\3\n\27\2\4\6\b\n\f\16\20\22\24")
-        buf.write("\26\30\32\34\36 \"$&(*\2\b\3\2\3\13\3\2\17\21\3\2\25\26")
-        buf.write("\5\2\17\17\21\21\27\27\4\2\21\21\27\27\3\2\30\31\2\u00d5")
-        buf.write("\2,\3\2\2\2\4.\3\2\2\2\6\60\3\2\2\2\b\62\3\2\2\2\nH\3")
-        buf.write("\2\2\2\fS\3\2\2\2\16W\3\2\2\2\20]\3\2\2\2\22d\3\2\2\2")
-        buf.write("\24o\3\2\2\2\26v\3\2\2\2\30|\3\2\2\2\32\u008d\3\2\2\2")
-        buf.write("\34\u008f\3\2\2\2\36\u0094\3\2\2\2 \u009c\3\2\2\2\"\u00a5")
-        buf.write("\3\2\2\2$\u00aa\3\2\2\2&\u00b2\3\2\2\2(\u00b8\3\2\2\2")
-        buf.write("*\u00c2\3\2\2\2,-\5\24\13\2-\3\3\2\2\2./\t\2\2\2/\5\3")
-        buf.write("\2\2\2\60\61\7\33\2\2\61\7\3\2\2\2\62\63\7\33\2\2\63<")
-        buf.write("\7 \2\2\649\5\n\6\2\65\66\7\'\2\2\668\5\n\6\2\67\65\3")
-        buf.write("\2\2\28;\3\2\2\29\67\3\2\2\29:\3\2\2\2:=\3\2\2\2;9\3\2")
-        buf.write("\2\2<\64\3\2\2\2<=\3\2\2\2=>\3\2\2\2>?\7!\2\2?\t\3\2\2")
-        buf.write("\2@A\b\6\1\2AB\7 \2\2BC\5\n\6\2CD\7!\2\2DI\3\2\2\2EI\7")
-        buf.write("\34\2\2FI\7\33\2\2GI\5\b\5\2H@\3\2\2\2HE\3\2\2\2HF\3\2")
-        buf.write("\2\2HG\3\2\2\2IP\3\2\2\2JK\f\6\2\2KL\5\4\3\2LM\5\n\6\7")
-        buf.write("MO\3\2\2\2NJ\3\2\2\2OR\3\2\2\2PN\3\2\2\2PQ\3\2\2\2Q\13")
-        buf.write("\3\2\2\2RP\3\2\2\2ST\7\33\2\2TU\7$\2\2UV\5\n\6\2V\r\3")
-        buf.write("\2\2\2WX\7\33\2\2X[\7%\2\2Y\\\5\32\16\2Z\\\5\n\6\2[Y\3")
-        buf.write("\2\2\2[Z\3\2\2\2\\\17\3\2\2\2]^\7\f\2\2^_\5\n\6\2_\21")
-        buf.write("\3\2\2\2`e\5\f\7\2ae\5\16\b\2be\5\20\t\2ce\5\n\6\2d`\3")
-        buf.write("\2\2\2da\3\2\2\2db\3\2\2\2dc\3\2\2\2e\23\3\2\2\2fn\5\26")
-        buf.write("\f\2gi\5\22\n\2hj\7&\2\2ih\3\2\2\2jk\3\2\2\2ki\3\2\2\2")
-        buf.write("kl\3\2\2\2ln\3\2\2\2mf\3\2\2\2mg\3\2\2\2nq\3\2\2\2om\3")
-        buf.write("\2\2\2op\3\2\2\2p\25\3\2\2\2qo\3\2\2\2rw\5 \21\2sw\5$")
-        buf.write("\23\2tw\5&\24\2uw\5*\26\2vr\3\2\2\2vs\3\2\2\2vt\3\2\2")
-        buf.write("\2vu\3\2\2\2w\27\3\2\2\2xy\7\r\2\2yz\7\33\2\2z}\7\r\2")
-        buf.write("\2{}\7\34\2\2|x\3\2\2\2|{\3\2\2\2}\31\3\2\2\2~\177\7\"")
-        buf.write("\2\2\177\u0084\5\30\r\2\u0080\u0081\7\'\2\2\u0081\u0083")
-        buf.write("\5\30\r\2\u0082\u0080\3\2\2\2\u0083\u0086\3\2\2\2\u0084")
-        buf.write("\u0082\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0087\3\2\2\2")
-        buf.write("\u0086\u0084\3\2\2\2\u0087\u0088\7#\2\2\u0088\u008e\3")
-        buf.write("\2\2\2\u0089\u008a\7\16\2\2\u008a\u008b\7 \2\2\u008b\u008c")
-        buf.write("\7\34\2\2\u008c\u008e\7!\2\2\u008d~\3\2\2\2\u008d\u0089")
-        buf.write("\3\2\2\2\u008e\33\3\2\2\2\u008f\u0092\7\33\2\2\u0090\u0091")
-        buf.write("\7(\2\2\u0091\u0093\5\32\16\2\u0092\u0090\3\2\2\2\u0092")
-        buf.write("\u0093\3\2\2\2\u0093\35\3\2\2\2\u0094\u0099\5\34\17\2")
-        buf.write("\u0095\u0096\7\'\2\2\u0096\u0098\5\34\17\2\u0097\u0095")
-        buf.write("\3\2\2\2\u0098\u009b\3\2\2\2\u0099\u0097\3\2\2\2\u0099")
-        buf.write("\u009a\3\2\2\2\u009a\37\3\2\2\2\u009b\u0099\3\2\2\2\u009c")
-        buf.write("\u009d\t\3\2\2\u009d\u009e\7\33\2\2\u009e\u00a0\7 \2\2")
-        buf.write("\u009f\u00a1\5\36\20\2\u00a0\u009f\3\2\2\2\u00a0\u00a1")
-        buf.write("\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\u00a3\7!\2\2\u00a3")
-        buf.write("\u00a4\5\"\22\2\u00a4!\3\2\2\2\u00a5\u00a6\7(\2\2\u00a6")
-        buf.write("\u00a7\7\"\2\2\u00a7\u00a8\5\24\13\2\u00a8\u00a9\7#\2")
-        buf.write("\2\u00a9#\3\2\2\2\u00aa\u00ab\7\22\2\2\u00ab\u00ac\5\n")
-        buf.write("\6\2\u00ac\u00ad\7\23\2\2\u00ad\u00b0\5\"\22\2\u00ae\u00af")
-        buf.write("\7\24\2\2\u00af\u00b1\5\"\22\2\u00b0\u00ae\3\2\2\2\u00b0")
-        buf.write("\u00b1\3\2\2\2\u00b1%\3\2\2\2\u00b2\u00b3\t\4\2\2\u00b3")
-        buf.write("\u00b4\7)\2\2\u00b4\u00b5\7\33\2\2\u00b5\u00b6\7*\2\2")
-        buf.write("\u00b6\u00b7\5\"\22\2\u00b7\'\3\2\2\2\u00b8\u00b9\t\5")
-        buf.write("\2\2\u00b9\u00bf\7\33\2\2\u00ba\u00bb\7\'\2\2\u00bb\u00bc")
-        buf.write("\t\6\2\2\u00bc\u00be\7\33\2\2\u00bd\u00ba\3\2\2\2\u00be")
-        buf.write("\u00c1\3\2\2\2\u00bf\u00bd\3\2\2\2\u00bf\u00c0\3\2\2\2")
-        buf.write("\u00c0)\3\2\2\2\u00c1\u00bf\3\2\2\2\u00c2\u00c3\t\7\2")
-        buf.write("\2\u00c3\u00c4\7)\2\2\u00c4\u00c5\7\33\2\2\u00c5\u00cc")
-        buf.write("\7*\2\2\u00c6\u00c7\7\32\2\2\u00c7\u00c9\7 \2\2\u00c8")
-        buf.write("\u00ca\5(\25\2\u00c9\u00c8\3\2\2\2\u00c9\u00ca\3\2\2\2")
-        buf.write("\u00ca\u00cb\3\2\2\2\u00cb\u00cd\7!\2\2\u00cc\u00c6\3")
-        buf.write("\2\2\2\u00cc\u00cd\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\u00cf")
-        buf.write("\5\"\22\2\u00cf+\3\2\2\2\269<HP[dkmov|\u0084\u008d\u0092")
-        buf.write("\u0099\u00a0\u00b0\u00bf\u00c9\u00cc")
+        buf.write("\3\25\7\25\u00c7\n\25\f\25\16\25\u00ca\13\25\3\26\3\26")
+        buf.write("\3\26\3\26\3\26\3\26\3\26\5\26\u00d3\n\26\3\26\5\26\u00d6")
+        buf.write("\n\26\3\26\3\26\3\27\3\27\3\30\3\30\3\30\3\30\3\31\3\31")
+        buf.write("\3\32\3\32\3\32\3\32\3\32\3\32\3\32\3\32\3\32\3\32\5\32")
+        buf.write("\u00ec\n\32\3\32\3\32\3\32\3\32\7\32\u00f2\n\32\f\32\16")
+        buf.write("\32\u00f5\13\32\3\32\2\4\n\62\33\2\4\6\b\n\f\16\20\22")
+        buf.write("\24\26\30\32\34\36 \"$&(*,.\60\62\2\n\3\2\3\13\3\2\17")
+        buf.write("\21\3\2\25\26\5\2\17\17\21\21\27\27\4\2\21\21\27\27\3")
+        buf.write("\2\30\31\3\2\35 \4\2\25\26\30\31\2\u00fb\2\64\3\2\2\2")
+        buf.write("\4\66\3\2\2\2\68\3\2\2\2\b:\3\2\2\2\nP\3\2\2\2\f[\3\2")
+        buf.write("\2\2\16_\3\2\2\2\20e\3\2\2\2\22l\3\2\2\2\24x\3\2\2\2\26")
+        buf.write("\177\3\2\2\2\30\u0085\3\2\2\2\32\u0096\3\2\2\2\34\u0098")
+        buf.write("\3\2\2\2\36\u009d\3\2\2\2 \u00a5\3\2\2\2\"\u00ae\3\2\2")
+        buf.write("\2$\u00b3\3\2\2\2&\u00bb\3\2\2\2(\u00c1\3\2\2\2*\u00cb")
+        buf.write("\3\2\2\2,\u00d9\3\2\2\2.\u00db\3\2\2\2\60\u00df\3\2\2")
+        buf.write("\2\62\u00eb\3\2\2\2\64\65\5\24\13\2\65\3\3\2\2\2\66\67")
+        buf.write("\t\2\2\2\67\5\3\2\2\289\7!\2\29\7\3\2\2\2:;\7!\2\2;D\7")
+        buf.write("&\2\2<A\5\n\6\2=>\7-\2\2>@\5\n\6\2?=\3\2\2\2@C\3\2\2\2")
+        buf.write("A?\3\2\2\2AB\3\2\2\2BE\3\2\2\2CA\3\2\2\2D<\3\2\2\2DE\3")
+        buf.write("\2\2\2EF\3\2\2\2FG\7\'\2\2G\t\3\2\2\2HI\b\6\1\2IJ\7&\2")
+        buf.write("\2JK\5\n\6\2KL\7\'\2\2LQ\3\2\2\2MQ\7\"\2\2NQ\7!\2\2OQ")
+        buf.write("\5\b\5\2PH\3\2\2\2PM\3\2\2\2PN\3\2\2\2PO\3\2\2\2QX\3\2")
+        buf.write("\2\2RS\f\6\2\2ST\5\4\3\2TU\5\n\6\7UW\3\2\2\2VR\3\2\2\2")
+        buf.write("WZ\3\2\2\2XV\3\2\2\2XY\3\2\2\2Y\13\3\2\2\2ZX\3\2\2\2[")
+        buf.write("\\\7!\2\2\\]\7*\2\2]^\5\n\6\2^\r\3\2\2\2_`\7!\2\2`c\7")
+        buf.write("+\2\2ad\5\32\16\2bd\5\n\6\2ca\3\2\2\2cb\3\2\2\2d\17\3")
+        buf.write("\2\2\2ef\7\f\2\2fg\5\n\6\2g\21\3\2\2\2hm\5\f\7\2im\5\16")
+        buf.write("\b\2jm\5\20\t\2km\5\n\6\2lh\3\2\2\2li\3\2\2\2lj\3\2\2")
+        buf.write("\2lk\3\2\2\2m\23\3\2\2\2nw\5\26\f\2ow\5,\27\2pr\5\22\n")
+        buf.write("\2qs\7,\2\2rq\3\2\2\2st\3\2\2\2tr\3\2\2\2tu\3\2\2\2uw")
+        buf.write("\3\2\2\2vn\3\2\2\2vo\3\2\2\2vp\3\2\2\2wz\3\2\2\2xv\3\2")
+        buf.write("\2\2xy\3\2\2\2y\25\3\2\2\2zx\3\2\2\2{\u0080\5 \21\2|\u0080")
+        buf.write("\5$\23\2}\u0080\5&\24\2~\u0080\5*\26\2\177{\3\2\2\2\177")
+        buf.write("|\3\2\2\2\177}\3\2\2\2\177~\3\2\2\2\u0080\27\3\2\2\2\u0081")
+        buf.write("\u0082\7\r\2\2\u0082\u0083\7!\2\2\u0083\u0086\7\r\2\2")
+        buf.write("\u0084\u0086\7\"\2\2\u0085\u0081\3\2\2\2\u0085\u0084\3")
+        buf.write("\2\2\2\u0086\31\3\2\2\2\u0087\u0088\7(\2\2\u0088\u008d")
+        buf.write("\5\30\r\2\u0089\u008a\7-\2\2\u008a\u008c\5\30\r\2\u008b")
+        buf.write("\u0089\3\2\2\2\u008c\u008f\3\2\2\2\u008d\u008b\3\2\2\2")
+        buf.write("\u008d\u008e\3\2\2\2\u008e\u0090\3\2\2\2\u008f\u008d\3")
+        buf.write("\2\2\2\u0090\u0091\7)\2\2\u0091\u0097\3\2\2\2\u0092\u0093")
+        buf.write("\7\16\2\2\u0093\u0094\7&\2\2\u0094\u0095\7\"\2\2\u0095")
+        buf.write("\u0097\7\'\2\2\u0096\u0087\3\2\2\2\u0096\u0092\3\2\2\2")
+        buf.write("\u0097\33\3\2\2\2\u0098\u009b\7!\2\2\u0099\u009a\7.\2")
+        buf.write("\2\u009a\u009c\5\32\16\2\u009b\u0099\3\2\2\2\u009b\u009c")
+        buf.write("\3\2\2\2\u009c\35\3\2\2\2\u009d\u00a2\5\34\17\2\u009e")
+        buf.write("\u009f\7-\2\2\u009f\u00a1\5\34\17\2\u00a0\u009e\3\2\2")
+        buf.write("\2\u00a1\u00a4\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a2\u00a3")
+        buf.write("\3\2\2\2\u00a3\37\3\2\2\2\u00a4\u00a2\3\2\2\2\u00a5\u00a6")
+        buf.write("\t\3\2\2\u00a6\u00a7\7!\2\2\u00a7\u00a9\7&\2\2\u00a8\u00aa")
+        buf.write("\5\36\20\2\u00a9\u00a8\3\2\2\2\u00a9\u00aa\3\2\2\2\u00aa")
+        buf.write("\u00ab\3\2\2\2\u00ab\u00ac\7\'\2\2\u00ac\u00ad\5\"\22")
+        buf.write("\2\u00ad!\3\2\2\2\u00ae\u00af\7.\2\2\u00af\u00b0\7(\2")
+        buf.write("\2\u00b0\u00b1\5\24\13\2\u00b1\u00b2\7)\2\2\u00b2#\3\2")
+        buf.write("\2\2\u00b3\u00b4\7\22\2\2\u00b4\u00b5\5\n\6\2\u00b5\u00b6")
+        buf.write("\7\23\2\2\u00b6\u00b9\5\"\22\2\u00b7\u00b8\7\24\2\2\u00b8")
+        buf.write("\u00ba\5\"\22\2\u00b9\u00b7\3\2\2\2\u00b9\u00ba\3\2\2")
+        buf.write("\2\u00ba%\3\2\2\2\u00bb\u00bc\t\4\2\2\u00bc\u00bd\7/\2")
+        buf.write("\2\u00bd\u00be\7!\2\2\u00be\u00bf\7\60\2\2\u00bf\u00c0")
+        buf.write("\5\"\22\2\u00c0\'\3\2\2\2\u00c1\u00c2\t\5\2\2\u00c2\u00c8")
+        buf.write("\7!\2\2\u00c3\u00c4\7-\2\2\u00c4\u00c5\t\6\2\2\u00c5\u00c7")
+        buf.write("\7!\2\2\u00c6\u00c3\3\2\2\2\u00c7\u00ca\3\2\2\2\u00c8")
+        buf.write("\u00c6\3\2\2\2\u00c8\u00c9\3\2\2\2\u00c9)\3\2\2\2\u00ca")
+        buf.write("\u00c8\3\2\2\2\u00cb\u00cc\t\7\2\2\u00cc\u00cd\7/\2\2")
+        buf.write("\u00cd\u00ce\7!\2\2\u00ce\u00d5\7\60\2\2\u00cf\u00d0\7")
+        buf.write("\32\2\2\u00d0\u00d2\7&\2\2\u00d1\u00d3\5(\25\2\u00d2\u00d1")
+        buf.write("\3\2\2\2\u00d2\u00d3\3\2\2\2\u00d3\u00d4\3\2\2\2\u00d4")
+        buf.write("\u00d6\7\'\2\2\u00d5\u00cf\3\2\2\2\u00d5\u00d6\3\2\2\2")
+        buf.write("\u00d6\u00d7\3\2\2\2\u00d7\u00d8\5\"\22\2\u00d8+\3\2\2")
+        buf.write("\2\u00d9\u00da\5.\30\2\u00da-\3\2\2\2\u00db\u00dc\7\33")
+        buf.write("\2\2\u00dc\u00dd\5\62\32\2\u00dd\u00de\7\34\2\2\u00de")
+        buf.write("/\3\2\2\2\u00df\u00e0\t\b\2\2\u00e0\61\3\2\2\2\u00e1\u00e2")
+        buf.write("\b\32\1\2\u00e2\u00e3\7&\2\2\u00e3\u00e4\5\62\32\2\u00e4")
+        buf.write("\u00e5\7\'\2\2\u00e5\u00ec\3\2\2\2\u00e6\u00e7\t\t\2\2")
+        buf.write("\u00e7\u00e8\7/\2\2\u00e8\u00e9\7!\2\2\u00e9\u00ec\7\60")
+        buf.write("\2\2\u00ea\u00ec\7!\2\2\u00eb\u00e1\3\2\2\2\u00eb\u00e6")
+        buf.write("\3\2\2\2\u00eb\u00ea\3\2\2\2\u00ec\u00f3\3\2\2\2\u00ed")
+        buf.write("\u00ee\f\5\2\2\u00ee\u00ef\5\60\31\2\u00ef\u00f0\5\62")
+        buf.write("\32\6\u00f0\u00f2\3\2\2\2\u00f1\u00ed\3\2\2\2\u00f2\u00f5")
+        buf.write("\3\2\2\2\u00f3\u00f1\3\2\2\2\u00f3\u00f4\3\2\2\2\u00f4")
+        buf.write("\63\3\2\2\2\u00f5\u00f3\3\2\2\2\30ADPXcltvx\177\u0085")
+        buf.write("\u008d\u0096\u009b\u00a2\u00a9\u00b9\u00c8\u00d2\u00d5")
+        buf.write("\u00eb\u00f3")
         return buf.getvalue()
 
 
@@ -110,9 +130,10 @@ class HybLangParser ( Parser ):
                      "'||'", "'^'", "'is'", "'return'", "'''", "'bin'", 
                      "'rout'", "'def'", "'func'", "'if'", "'then'", "'else'", 
                      "'pro'", "'program'", "'var'", "'lib'", "'library'", 
-                     "'exposing'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'('", "')'", "'{'", "'}'", 
-                     "':='", "'<-'", "';'", "','", "':'", "'['", "']'" ]
+                     "'exposing'", "'show'", "'.'", "'<>'", "'=='", "'~='", 
+                     "'=>'", "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "'('", "')'", "'{'", "'}'", "':='", "'<-'", 
+                     "';'", "','", "':'", "'['", "']'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
@@ -120,10 +141,11 @@ class HybLangParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "IDENTIFIER", "NUMBER", "NEWLINE", "WS", 
-                      "SET_LIT", "LPAREN", "RPAREN", "LBRACK", "RBRACK", 
-                      "ASSIGN", "SAMPLE", "SEPARATOR", "SEQSEP", "BLOCKSTART", 
-                      "LSQBRACK", "RSQBRACK", "BIN_OP" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "<INVALID>", "<INVALID>", "IDENTIFIER", 
+                      "NUMBER", "NEWLINE", "WS", "SET_LIT", "LPAREN", "RPAREN", 
+                      "LBRACK", "RBRACK", "ASSIGN", "SAMPLE", "SEPARATOR", 
+                      "SEQSEP", "BLOCKSTART", "LSQBRACK", "RSQBRACK", "BIN_OP" ]
 
     RULE_program = 0
     RULE_bin_op = 1
@@ -146,12 +168,18 @@ class HybLangParser ( Parser ):
     RULE_call_prog_def = 18
     RULE_exposing_sequence = 19
     RULE_library_def = 20
+    RULE_query_statement = 21
+    RULE_show_query_statement = 22
+    RULE_query_relation = 23
+    RULE_query_expression = 24
 
     ruleNames =  [ "program", "bin_op", "identifier", "function_call", "expression", 
                    "assignment", "sample", "return_stmt", "statement", "procedure", 
                    "non_statement", "set_lit", "set_type", "function_argument", 
                    "function_arguments", "function_def", "block", "if_stmt", 
-                   "call_prog_def", "exposing_sequence", "library_def" ]
+                   "call_prog_def", "exposing_sequence", "library_def", 
+                   "query_statement", "show_query_statement", "query_relation", 
+                   "query_expression" ]
 
     EOF = Token.EOF
     T__0=1
@@ -178,23 +206,29 @@ class HybLangParser ( Parser ):
     T__21=22
     T__22=23
     T__23=24
-    IDENTIFIER=25
-    NUMBER=26
-    NEWLINE=27
-    WS=28
-    SET_LIT=29
-    LPAREN=30
-    RPAREN=31
-    LBRACK=32
-    RBRACK=33
-    ASSIGN=34
-    SAMPLE=35
-    SEPARATOR=36
-    SEQSEP=37
-    BLOCKSTART=38
-    LSQBRACK=39
-    RSQBRACK=40
-    BIN_OP=41
+    T__24=25
+    T__25=26
+    T__26=27
+    T__27=28
+    T__28=29
+    T__29=30
+    IDENTIFIER=31
+    NUMBER=32
+    NEWLINE=33
+    WS=34
+    SET_LIT=35
+    LPAREN=36
+    RPAREN=37
+    LBRACK=38
+    RBRACK=39
+    ASSIGN=40
+    SAMPLE=41
+    SEPARATOR=42
+    SEQSEP=43
+    BLOCKSTART=44
+    LSQBRACK=45
+    RSQBRACK=46
+    BIN_OP=47
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -234,7 +268,7 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_program)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 42
+            self.state = 50
             self.procedure()
         except RecognitionException as re:
             localctx.exception = re
@@ -272,7 +306,7 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 44
+            self.state = 52
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__0) | (1 << HybLangParser.T__1) | (1 << HybLangParser.T__2) | (1 << HybLangParser.T__3) | (1 << HybLangParser.T__4) | (1 << HybLangParser.T__5) | (1 << HybLangParser.T__6) | (1 << HybLangParser.T__7) | (1 << HybLangParser.T__8))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -316,7 +350,7 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_identifier)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 46
+            self.state = 54
             self.match(HybLangParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -375,31 +409,31 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 48
+            self.state = 56
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 49
+            self.state = 57
             self.match(HybLangParser.LPAREN)
-            self.state = 58
+            self.state = 66
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.IDENTIFIER) | (1 << HybLangParser.NUMBER) | (1 << HybLangParser.LPAREN))) != 0):
-                self.state = 50
+                self.state = 58
                 self.expression(0)
-                self.state = 55
+                self.state = 63
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==HybLangParser.SEQSEP:
-                    self.state = 51
+                    self.state = 59
                     self.match(HybLangParser.SEQSEP)
-                    self.state = 52
+                    self.state = 60
                     self.expression(0)
-                    self.state = 57
+                    self.state = 65
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 60
+            self.state = 68
             self.match(HybLangParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -464,36 +498,36 @@ class HybLangParser ( Parser ):
         self.enterRecursionRule(localctx, 8, self.RULE_expression, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 70
+            self.state = 78
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
-                self.state = 63
+                self.state = 71
                 self.match(HybLangParser.LPAREN)
-                self.state = 64
+                self.state = 72
                 self.expression(0)
-                self.state = 65
+                self.state = 73
                 self.match(HybLangParser.RPAREN)
                 pass
 
             elif la_ == 2:
-                self.state = 67
+                self.state = 75
                 self.match(HybLangParser.NUMBER)
                 pass
 
             elif la_ == 3:
-                self.state = 68
+                self.state = 76
                 self.match(HybLangParser.IDENTIFIER)
                 pass
 
             elif la_ == 4:
-                self.state = 69
+                self.state = 77
                 self.function_call()
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 78
+            self.state = 86
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -503,15 +537,15 @@ class HybLangParser ( Parser ):
                     _prevctx = localctx
                     localctx = HybLangParser.ExpressionContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                    self.state = 72
+                    self.state = 80
                     if not self.precpred(self._ctx, 4):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                    self.state = 73
+                    self.state = 81
                     self.bin_op()
-                    self.state = 74
+                    self.state = 82
                     self.expression(5) 
-                self.state = 80
+                self.state = 88
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
 
@@ -559,11 +593,11 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_assignment)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 81
+            self.state = 89
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 82
+            self.state = 90
             self.match(HybLangParser.ASSIGN)
-            self.state = 83
+            self.state = 91
             self.expression(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -613,19 +647,19 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_sample)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 85
+            self.state = 93
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 86
+            self.state = 94
             self.match(HybLangParser.SAMPLE)
-            self.state = 89
+            self.state = 97
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [HybLangParser.T__11, HybLangParser.LBRACK]:
-                self.state = 87
+                self.state = 95
                 self.set_type()
                 pass
             elif token in [HybLangParser.IDENTIFIER, HybLangParser.NUMBER, HybLangParser.LPAREN]:
-                self.state = 88
+                self.state = 96
                 self.expression(0)
                 pass
             else:
@@ -669,9 +703,9 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_return_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 91
+            self.state = 99
             self.match(HybLangParser.T__9)
-            self.state = 92
+            self.state = 100
             self.expression(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -722,30 +756,30 @@ class HybLangParser ( Parser ):
         localctx = HybLangParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_statement)
         try:
-            self.state = 98
+            self.state = 106
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 94
+                self.state = 102
                 self.assignment()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 95
+                self.state = 103
                 self.sample()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 96
+                self.state = 104
                 self.return_stmt()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 97
+                self.state = 105
                 self.expression(0)
                 pass
 
@@ -771,6 +805,13 @@ class HybLangParser ( Parser ):
                 return self.getTypedRuleContexts(HybLangParser.Non_statementContext)
             else:
                 return self.getTypedRuleContext(HybLangParser.Non_statementContext,i)
+
+
+        def query_statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(HybLangParser.Query_statementContext)
+            else:
+                return self.getTypedRuleContext(HybLangParser.Query_statementContext,i)
 
 
         def statement(self, i:int=None):
@@ -805,27 +846,31 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 118
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__9) | (1 << HybLangParser.T__12) | (1 << HybLangParser.T__13) | (1 << HybLangParser.T__14) | (1 << HybLangParser.T__15) | (1 << HybLangParser.T__18) | (1 << HybLangParser.T__19) | (1 << HybLangParser.T__21) | (1 << HybLangParser.T__22) | (1 << HybLangParser.IDENTIFIER) | (1 << HybLangParser.NUMBER) | (1 << HybLangParser.LPAREN))) != 0):
-                self.state = 107
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__9) | (1 << HybLangParser.T__12) | (1 << HybLangParser.T__13) | (1 << HybLangParser.T__14) | (1 << HybLangParser.T__15) | (1 << HybLangParser.T__18) | (1 << HybLangParser.T__19) | (1 << HybLangParser.T__21) | (1 << HybLangParser.T__22) | (1 << HybLangParser.T__24) | (1 << HybLangParser.IDENTIFIER) | (1 << HybLangParser.NUMBER) | (1 << HybLangParser.LPAREN))) != 0):
+                self.state = 116
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [HybLangParser.T__12, HybLangParser.T__13, HybLangParser.T__14, HybLangParser.T__15, HybLangParser.T__18, HybLangParser.T__19, HybLangParser.T__21, HybLangParser.T__22]:
-                    self.state = 100
+                    self.state = 108
                     self.non_statement()
                     pass
+                elif token in [HybLangParser.T__24]:
+                    self.state = 109
+                    self.query_statement()
+                    pass
                 elif token in [HybLangParser.T__9, HybLangParser.IDENTIFIER, HybLangParser.NUMBER, HybLangParser.LPAREN]:
-                    self.state = 101
+                    self.state = 110
                     self.statement()
-                    self.state = 103 
+                    self.state = 112 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while True:
-                        self.state = 102
+                        self.state = 111
                         self.match(HybLangParser.SEPARATOR)
-                        self.state = 105 
+                        self.state = 114 
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if not (_la==HybLangParser.SEPARATOR):
@@ -835,7 +880,7 @@ class HybLangParser ( Parser ):
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 111
+                self.state = 120
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -888,27 +933,27 @@ class HybLangParser ( Parser ):
         localctx = HybLangParser.Non_statementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_non_statement)
         try:
-            self.state = 116
+            self.state = 125
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [HybLangParser.T__12, HybLangParser.T__13, HybLangParser.T__14]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 112
+                self.state = 121
                 self.function_def()
                 pass
             elif token in [HybLangParser.T__15]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 113
+                self.state = 122
                 self.if_stmt()
                 pass
             elif token in [HybLangParser.T__18, HybLangParser.T__19]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 114
+                self.state = 123
                 self.call_prog_def()
                 pass
             elif token in [HybLangParser.T__21, HybLangParser.T__22]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 115
+                self.state = 124
                 self.library_def()
                 pass
             else:
@@ -953,21 +998,21 @@ class HybLangParser ( Parser ):
         localctx = HybLangParser.Set_litContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_set_lit)
         try:
-            self.state = 122
+            self.state = 131
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [HybLangParser.T__10]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 118
+                self.state = 127
                 self.match(HybLangParser.T__10)
-                self.state = 119
+                self.state = 128
                 self.match(HybLangParser.IDENTIFIER)
-                self.state = 120
+                self.state = 129
                 self.match(HybLangParser.T__10)
                 pass
             elif token in [HybLangParser.NUMBER]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 121
+                self.state = 130
                 self.match(HybLangParser.NUMBER)
                 pass
             else:
@@ -1035,39 +1080,39 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_set_type)
         self._la = 0 # Token type
         try:
-            self.state = 139
+            self.state = 148
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [HybLangParser.LBRACK]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 124
+                self.state = 133
                 self.match(HybLangParser.LBRACK)
-                self.state = 125
+                self.state = 134
                 self.set_lit()
-                self.state = 130
+                self.state = 139
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==HybLangParser.SEQSEP:
-                    self.state = 126
+                    self.state = 135
                     self.match(HybLangParser.SEQSEP)
-                    self.state = 127
+                    self.state = 136
                     self.set_lit()
-                    self.state = 132
+                    self.state = 141
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-                self.state = 133
+                self.state = 142
                 self.match(HybLangParser.RBRACK)
                 pass
             elif token in [HybLangParser.T__11]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 135
+                self.state = 144
                 self.match(HybLangParser.T__11)
-                self.state = 136
+                self.state = 145
                 self.match(HybLangParser.LPAREN)
-                self.state = 137
+                self.state = 146
                 self.match(HybLangParser.NUMBER)
-                self.state = 138
+                self.state = 147
                 self.match(HybLangParser.RPAREN)
                 pass
             else:
@@ -1118,15 +1163,15 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 141
+            self.state = 150
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 144
+            self.state = 153
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==HybLangParser.BLOCKSTART:
-                self.state = 142
+                self.state = 151
                 self.match(HybLangParser.BLOCKSTART)
-                self.state = 143
+                self.state = 152
                 self.set_type()
 
 
@@ -1178,17 +1223,17 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 146
+            self.state = 155
             self.function_argument()
-            self.state = 151
+            self.state = 160
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==HybLangParser.SEQSEP:
-                self.state = 147
+                self.state = 156
                 self.match(HybLangParser.SEQSEP)
-                self.state = 148
+                self.state = 157
                 self.function_argument()
-                self.state = 153
+                self.state = 162
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1244,28 +1289,28 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 154
+            self.state = 163
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__12) | (1 << HybLangParser.T__13) | (1 << HybLangParser.T__14))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 155
+            self.state = 164
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 156
+            self.state = 165
             self.match(HybLangParser.LPAREN)
-            self.state = 158
+            self.state = 167
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==HybLangParser.IDENTIFIER:
-                self.state = 157
+                self.state = 166
                 self.function_arguments()
 
 
-            self.state = 160
+            self.state = 169
             self.match(HybLangParser.RPAREN)
-            self.state = 161
+            self.state = 170
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -1314,13 +1359,13 @@ class HybLangParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_block)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 163
+            self.state = 172
             self.match(HybLangParser.BLOCKSTART)
-            self.state = 164
+            self.state = 173
             self.match(HybLangParser.LBRACK)
-            self.state = 165
+            self.state = 174
             self.procedure()
-            self.state = 166
+            self.state = 175
             self.match(HybLangParser.RBRACK)
         except RecognitionException as re:
             localctx.exception = re
@@ -1368,21 +1413,21 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 168
+            self.state = 177
             self.match(HybLangParser.T__15)
-            self.state = 169
+            self.state = 178
             self.expression(0)
-            self.state = 170
+            self.state = 179
             self.match(HybLangParser.T__16)
-            self.state = 171
+            self.state = 180
             self.block()
-            self.state = 174
+            self.state = 183
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==HybLangParser.T__17:
-                self.state = 172
+                self.state = 181
                 self.match(HybLangParser.T__17)
-                self.state = 173
+                self.state = 182
                 self.block()
 
 
@@ -1434,20 +1479,20 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 176
+            self.state = 185
             _la = self._input.LA(1)
             if not(_la==HybLangParser.T__18 or _la==HybLangParser.T__19):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 177
+            self.state = 186
             self.match(HybLangParser.LSQBRACK)
-            self.state = 178
+            self.state = 187
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 179
+            self.state = 188
             self.match(HybLangParser.RSQBRACK)
-            self.state = 180
+            self.state = 189
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -1496,31 +1541,31 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 182
+            self.state = 191
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__12) | (1 << HybLangParser.T__14) | (1 << HybLangParser.T__20))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 183
+            self.state = 192
             self.match(HybLangParser.IDENTIFIER)
-            self.state = 189
+            self.state = 198
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==HybLangParser.SEQSEP:
-                self.state = 184
+                self.state = 193
                 self.match(HybLangParser.SEQSEP)
-                self.state = 185
+                self.state = 194
                 _la = self._input.LA(1)
                 if not(_la==HybLangParser.T__14 or _la==HybLangParser.T__20):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 186
+                self.state = 195
                 self.match(HybLangParser.IDENTIFIER)
-                self.state = 191
+                self.state = 200
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1582,40 +1627,40 @@ class HybLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 192
+            self.state = 201
             _la = self._input.LA(1)
             if not(_la==HybLangParser.T__21 or _la==HybLangParser.T__22):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 193
-            self.match(HybLangParser.LSQBRACK)
-            self.state = 194
-            self.match(HybLangParser.IDENTIFIER)
-            self.state = 195
-            self.match(HybLangParser.RSQBRACK)
             self.state = 202
+            self.match(HybLangParser.LSQBRACK)
+            self.state = 203
+            self.match(HybLangParser.IDENTIFIER)
+            self.state = 204
+            self.match(HybLangParser.RSQBRACK)
+            self.state = 211
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==HybLangParser.T__23:
-                self.state = 196
+                self.state = 205
                 self.match(HybLangParser.T__23)
-                self.state = 197
+                self.state = 206
                 self.match(HybLangParser.LPAREN)
-                self.state = 199
+                self.state = 208
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__12) | (1 << HybLangParser.T__14) | (1 << HybLangParser.T__20))) != 0):
-                    self.state = 198
+                    self.state = 207
                     self.exposing_sequence()
 
 
-                self.state = 201
+                self.state = 210
                 self.match(HybLangParser.RPAREN)
 
 
-            self.state = 204
+            self.state = 213
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -1626,11 +1671,258 @@ class HybLangParser ( Parser ):
         return localctx
 
 
+    class Query_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def show_query_statement(self):
+            return self.getTypedRuleContext(HybLangParser.Show_query_statementContext,0)
+
+
+        def getRuleIndex(self):
+            return HybLangParser.RULE_query_statement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuery_statement" ):
+                return visitor.visitQuery_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def query_statement(self):
+
+        localctx = HybLangParser.Query_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 42, self.RULE_query_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 215
+            self.show_query_statement()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Show_query_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def query_expression(self):
+            return self.getTypedRuleContext(HybLangParser.Query_expressionContext,0)
+
+
+        def getRuleIndex(self):
+            return HybLangParser.RULE_show_query_statement
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitShow_query_statement" ):
+                return visitor.visitShow_query_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def show_query_statement(self):
+
+        localctx = HybLangParser.Show_query_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 44, self.RULE_show_query_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 217
+            self.match(HybLangParser.T__24)
+            self.state = 218
+            self.query_expression(0)
+            self.state = 219
+            self.match(HybLangParser.T__25)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Query_relationContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return HybLangParser.RULE_query_relation
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuery_relation" ):
+                return visitor.visitQuery_relation(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def query_relation(self):
+
+        localctx = HybLangParser.Query_relationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 46, self.RULE_query_relation)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 221
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__26) | (1 << HybLangParser.T__27) | (1 << HybLangParser.T__28) | (1 << HybLangParser.T__29))) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Query_expressionContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def LPAREN(self):
+            return self.getToken(HybLangParser.LPAREN, 0)
+
+        def query_expression(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(HybLangParser.Query_expressionContext)
+            else:
+                return self.getTypedRuleContext(HybLangParser.Query_expressionContext,i)
+
+
+        def RPAREN(self):
+            return self.getToken(HybLangParser.RPAREN, 0)
+
+        def LSQBRACK(self):
+            return self.getToken(HybLangParser.LSQBRACK, 0)
+
+        def IDENTIFIER(self):
+            return self.getToken(HybLangParser.IDENTIFIER, 0)
+
+        def RSQBRACK(self):
+            return self.getToken(HybLangParser.RSQBRACK, 0)
+
+        def query_relation(self):
+            return self.getTypedRuleContext(HybLangParser.Query_relationContext,0)
+
+
+        def getRuleIndex(self):
+            return HybLangParser.RULE_query_expression
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuery_expression" ):
+                return visitor.visitQuery_expression(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def query_expression(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = HybLangParser.Query_expressionContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 48
+        self.enterRecursionRule(localctx, 48, self.RULE_query_expression, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 233
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [HybLangParser.LPAREN]:
+                self.state = 224
+                self.match(HybLangParser.LPAREN)
+                self.state = 225
+                self.query_expression(0)
+                self.state = 226
+                self.match(HybLangParser.RPAREN)
+                pass
+            elif token in [HybLangParser.T__18, HybLangParser.T__19, HybLangParser.T__21, HybLangParser.T__22]:
+                self.state = 228
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << HybLangParser.T__18) | (1 << HybLangParser.T__19) | (1 << HybLangParser.T__21) | (1 << HybLangParser.T__22))) != 0)):
+                    self._errHandler.recoverInline(self)
+                else:
+                    self._errHandler.reportMatch(self)
+                    self.consume()
+                self.state = 229
+                self.match(HybLangParser.LSQBRACK)
+                self.state = 230
+                self.match(HybLangParser.IDENTIFIER)
+                self.state = 231
+                self.match(HybLangParser.RSQBRACK)
+                pass
+            elif token in [HybLangParser.IDENTIFIER]:
+                self.state = 232
+                self.match(HybLangParser.IDENTIFIER)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 241
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = HybLangParser.Query_expressionContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_query_expression)
+                    self.state = 235
+                    if not self.precpred(self._ctx, 3):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+                    self.state = 236
+                    self.query_relation()
+                    self.state = 237
+                    self.query_expression(4) 
+                self.state = 243
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
 
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[4] = self.expression_sempred
+        self._predicates[24] = self.query_expression_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
@@ -1640,6 +1932,11 @@ class HybLangParser ( Parser ):
     def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
             if predIndex == 0:
                 return self.precpred(self._ctx, 4)
+         
+
+    def query_expression_sempred(self, localctx:Query_expressionContext, predIndex:int):
+            if predIndex == 1:
+                return self.precpred(self._ctx, 3)
          
 
 

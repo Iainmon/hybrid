@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from pyclbr import Function
 from typing import Any, Optional
 
 class AST():
@@ -111,6 +110,38 @@ class LibraryDefinition(NonStatement):
 
 # -------- NonStatement (end) --------
 
+@dataclass
+class QueryExpression(AST):
+    pass
+@dataclass
+class QueryIdentifier(QueryExpression):
+    pass
+@dataclass
+class QueryStatement(NonStatement):
+    pass
+
+@dataclass
+class ProgramReference(QueryIdentifier):
+    name : str
+@dataclass
+class LibraryReference(QueryIdentifier):
+    name : str
+@dataclass
+class QueryRelation(QueryExpression):
+    lhs : QueryExpression
+    relation : str 
+    rhs : QueryExpression
+
+
+@dataclass
+class ShowQueryStatement(QueryStatement):
+    expression : QueryExpression
+
+
+
+
+
+
 
 def construct_ast(parse_tree) -> Any:
     match parse_tree:
@@ -148,6 +179,16 @@ def construct_ast(parse_tree) -> Any:
             return CallingProgramDefinition(name, construct_ast(block))
         case {'library_def': {'name': {'id': name}, 'body': block}}:
             return LibraryDefinition(name, [], construct_ast(block))
+        case {'query': query}:
+            return construct_ast(query)
+        case {'show_query': expr}:
+            return ShowQueryStatement(construct_ast(expr))
+        case {'query_relation': {'lhs':lhs,'relation': relation, 'rhs': rhs}}:
+            return QueryRelation(construct_ast(lhs),relation,construct_ast(rhs))
+        case {'pro': {'id': name}}:
+            return ProgramReference(name)
+        case {'lib': {'id': name}}:
+            return LibraryReference(name)
         case x if type(x) is list:
             return Block([construct_ast(y) for y in x])
         case _:

@@ -53,3 +53,22 @@ lib [right] : {
         return x + y + z;
     }
 }
+
+lib [real] : {
+    rout ctxt(x,y : {'true','false'}) : {
+        z <- {'true','false'};
+        if x * y then : {
+            return z;
+        }
+        return x + y;
+    }
+}
+lib [rand] : {
+    rout ctxt(x,y : {'true','false'}) : {
+        z <- {'true','false'};
+        return z;
+    }
+}
+
+
+show pro[A] <> lib[rand].

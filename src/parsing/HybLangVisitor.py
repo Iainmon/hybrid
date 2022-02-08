@@ -114,5 +114,25 @@ class HybLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by HybLangParser#query_statement.
+    def visitQuery_statement(self, ctx:HybLangParser.Query_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by HybLangParser#show_query_statement.
+    def visitShow_query_statement(self, ctx:HybLangParser.Show_query_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by HybLangParser#query_relation.
+    def visitQuery_relation(self, ctx:HybLangParser.Query_relationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by HybLangParser#query_expression.
+    def visitQuery_expression(self, ctx:HybLangParser.Query_expressionContext):
+        return self.visitChildren(ctx)
+
+
 
 del HybLangParser

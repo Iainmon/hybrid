@@ -29,23 +29,17 @@
 \newcommand{\K}{\mathcal{K}}
 \newcommand{\M}{\mathcal{M}}
 \newcommand{\C}{\mathcal{C}}
-\newcommand{\U}{\mathcal{U}}
 \newcommand{\Z}{\mathbb{Z}}
 
 \newcommand{\Enc}{\text{\sf Enc}}
 \newcommand{\Dec}{\text{\sf Dec}}
 \newcommand{\KeyGen}{\text{\sf KeyGen}}
-\newcommand{\Share}{\text{\sf Share}}
-\newcommand{\Reconstruct}{\text{\sf Reconstruct}}
 \newcommand{\fname}[1]{\text{\sf #1}}
-\newcommand{\bdp}{\text{\sf BirthdayProb}}
-
 
 % fancy script L
 \RequirePackage[mathscr]{euscript}
 \renewcommand{\L}{\ensuremath{\mathscr{L}}\xspace}
 \newcommand{\lib}[1]{\ensuremath{\L_{\textsf{#1}}}\xspace}
-\newcommand{\hyprog}[1]{\ensuremath{\A_{\textsf{#1}}}\xspace}
 
 
 \newcommand{\myterm}[1]{\ensuremath{\text{#1}}\xspace}
@@ -54,12 +48,11 @@
 \newcommand{\subname}[1]{\ensuremath{\textsc{#1}}\xspace}
 
 
-
 %% colors
 \definecolor{highlightcolor}{HTML}{F5F5A4}
 \definecolor{highlighttextcolor}{HTML}{000000}
 \definecolor{bitcolor}{HTML}{a91616}
-
+\definecolor{tan}{HTML}{FFEBCD}
 
 %%% boxes for writing libraries/constructions
 \RequirePackage{varwidth}
@@ -79,7 +72,7 @@
         \centering%
         \fboxsep=3pt%
         \colorbox{black!10}{#1} \\
-        \colorbox{white}{\codebox{#2}}%
+        \colorbox{tan!30}{\codebox{#2}}%
         \end{varwidth}%
     }
 }
@@ -101,7 +94,7 @@
         \centering%
         \fboxsep=3pt%
         % \colorbox{black!10}{#1} \\
-        \colorbox{white}{\codebox{#1}}%
+        \colorbox{tan!30}{\codebox{#1}}%
         \end{varwidth}%
     }
 }
@@ -158,12 +151,6 @@
     }
 }
 
-\newcommand{\comment}[1]{%
-    \begin{minipage}{.2\textwidth}%
-    #1%
-    \end{minipage}%
-}
-
 
 %% highlighting
 \newcommand{\basehighlight}[1]{\colorbox{highlightcolor}{\color{highlighttextcolor}#1}}
@@ -207,9 +194,6 @@
 \def\sc#1{\dosc#1\csod}
 \def\dosc#1#2\csod{{\rm #1{\small #2}}}
 \def\Binl{\Bin^\lambda}
-\def\Binin{\Bin^{\textsf{in}}}
-\def\Binout{\Bin^{\textsf{out}}}
-\def\mfin{\textsf{in}}
-\def\mfout{\textsf{out}}
+
 
 %%%%

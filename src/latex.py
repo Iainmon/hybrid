@@ -2,18 +2,39 @@
 from syntax import *
 import os
 import tempfile
+from dataclasses import dataclass
 
+@dataclass
+class Stylizer(AST):
+    pass
+@dataclass
+class Relation(Stylizer):
+    pass
 
-# def latexify(ast):
-#     match ast:
-#         case {'program': block}:
-#             return latexify()
+@dataclass
+class HighlightExpression(Stylizer):
+    expression : AST
+
+@dataclass
+class Link(Relation):
+    lhs : AST
+    rhs : AST
+@dataclass
+class Interchangable(Relation):
+    lhs : AST
+    rhs : AST
+@dataclass
+class Indistinguishable(Relation):
+    lhs : AST
+    rhs : AST
 
 
 def bin_op_tex(op: str) -> str:
     op_dict = {
         'xor' : '\\oplus',
-        'is': '\\overset{?}{=}'
+        'is': '\\overset{?}{=}',
+        '*': '\\cdot',
+        '&': '\\&',
     }
     if op in op_dict.keys():
         return op_dict[op]
@@ -49,7 +70,9 @@ def texify(ast: AST) -> str:
         case FunctionArgument(name,type):
             if type is None:
                 return str(name)
-            return f'{name}' + '\\in \\Bin'
+            return f'{name} \\in {texify(type)}'
+
+            # return f'{name}' + '\\in \\Bin'
         case FunctionArguments(args):
             return ', '.join(texify(arg) for n,arg in args)
         case FunctionDefinition(fun_name,args,block):

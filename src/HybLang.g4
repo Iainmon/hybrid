@@ -49,7 +49,7 @@ statement : assignment
           ;
 
 // procedure : statement (NEWLINE+ statement)* NEWLINE*;
-procedure : (non_statement | statement ';'+)* ;
+procedure : (non_statement | query_statement | statement ';'+)* ;
 non_statement : function_def | if_stmt | call_prog_def | library_def;
 // procedure : statement NEWLINE? | procedureRec;
 // procedureRec : statement NEWLINE procedure NEWLINE*;
@@ -69,3 +69,13 @@ if_stmt : 'if' expression 'then'  block ('else' block)?;
 call_prog_def : ('pro'|'program') '[' IDENTIFIER ']' block ;
 exposing_sequence : ('rout'|'func'|'var') IDENTIFIER (','('func'|'var') IDENTIFIER)*;
 library_def : ('lib' | 'library') '[' IDENTIFIER ']' ('exposing' '(' exposing_sequence? ')')? block;
+
+
+query_statement : show_query_statement ;
+show_query_statement : 'show' query_expression '.';
+query_relation : '<>' | '==' | '~=' | '=>' ;
+query_expression : LPAREN query_expression RPAREN 
+                 | query_expression query_relation query_expression 
+                 | ('pro' | 'program' | 'lib' | 'library') '[' IDENTIFIER ']'
+                 | IDENTIFIER 
+                 ;

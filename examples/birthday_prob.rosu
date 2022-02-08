@@ -1,0 +1,39 @@
+
+
+lib [WeekFour] : {
+    rout bdp(q,N) : {
+        if LessThan(q,1) then : {
+            return 1;
+        }
+        p := 1 - (q/N);
+        return p * bdp(q-1,N);
+    }
+    rout BirthdayProb(q,N) : {
+
+        return 1 - bdp(q,N)
+    }
+}
+
+lib [real] : {
+    rout ctxt(x,y : {'true','false'},) : {
+        z <- {'true','false'},;
+        if x * y then : {
+            return z;
+        }
+        return x + y;
+    }
+}
+lib [rand] : {
+    rout ctxt(x,y : {'true','false'},) : {
+        z <- {'true','false'},;
+        return z;
+    }
+}
+
+lib [david] : {
+    rout Enc(m : {0,1}) :{
+        k <- {0,1};
+        c := k xor m;
+        return c;
+    }
+}
