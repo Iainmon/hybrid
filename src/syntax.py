@@ -33,6 +33,10 @@ class Number(Literal):
     num : int
 
 @dataclass
+class String(Literal):
+    string : str
+
+@dataclass
 class BinaryOperation(Expression):
     lhs : Expression
     bin_op : str
@@ -132,11 +136,17 @@ class QueryRelation(QueryExpression):
     relation : str 
     rhs : QueryExpression
 
+@dataclass
+class Write(QueryExpression):
+    body : String 
 
 @dataclass
 class ShowQueryStatement(QueryStatement):
     expression : QueryExpression
 
+@dataclass
+class WriteQueryStatement(QueryStatement):
+    body : Write
 
 
 
@@ -149,6 +159,8 @@ def construct_ast(parse_tree) -> Any:
             return Identifier(name)
         case {'num': number}:
             return Number(number)
+        case {'string': string}:
+            return String(string)
         case {'assignment': {'lhs': lhs, 'rhs': rhs}}:
             return Assignment(construct_ast(lhs), construct_ast(rhs))
         case {'sample': {'lhs': lhs, 'rhs': rhs}}:
@@ -189,6 +201,10 @@ def construct_ast(parse_tree) -> Any:
             return ProgramReference(name)
         case {'lib': {'id': name}}:
             return LibraryReference(name)
+        case {'write': body}:
+            return Write(construct_ast(body))
+        case {'write_query': write}:
+            return WriteQueryStatement(construct_ast(write))
         case x if type(x) is list:
             return Block([construct_ast(y) for y in x])
         case _:

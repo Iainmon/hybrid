@@ -44,6 +44,8 @@ def texify_relation(relation: str) -> str:
         '<>' : '\\link',
         '==' : '\\equiv',
         '~=' : '\\indist',
+        '|'  : '\\quad',
+        '=>' : '\\implies',
     }
     if relation in rel_dict.keys():
         return rel_dict[relation]
@@ -59,7 +61,11 @@ def texify(ast: AST,queries_only = True) -> str:
         case Identifier(id):
             return id
         case Number(n):
+            if n == 0 or n == 1:
+                return f'\\bit{n}'
             return str(n)
+        case String(string):
+            return '\\\\\\text{' + string + '}'
         case Assignment(lhs,rhs):
             return f'${texify(lhs)} := {texify(rhs)}$'
         case Sample(lhs,rhs):
@@ -111,8 +117,8 @@ def texify(ast: AST,queries_only = True) -> str:
             if queries_only:
                 for line in definitions:
                     texify(line) # populates context
-                return '&' + '\\quad'.join(texify(line) for line in definitions if isinstance(line,QueryStatement))
-            return '&' + '\\quad'.join(texify(line) for line in definitions)
+                return '\\quad'.join(texify(line) for line in definitions if isinstance(line,QueryStatement))
+            return '\\quad'.join(texify(line) for line in definitions)
         case ProgramReference(name):
             if name in context['program'].keys():
                 return texify(context['program'][name])
@@ -122,9 +128,13 @@ def texify(ast: AST,queries_only = True) -> str:
                 return texify(context['library'][name])
             return '\\lib{' + name + '}'
         case ShowQueryStatement(expr):
-            return '\\\\&' + texify(expr)
+            return '\\\\' + texify(expr)
         case QueryRelation(lhs,relation,rhs):
             return texify(lhs) + texify_relation(relation) + texify(rhs)
+        case Write(String(comment)):
+            return '\\text{' + comment + '}'
+        case WriteQueryStatement(String(comment)):
+            return '\\end{gather*}\n' + texify(String(comment)) + '\n\\begin{gather*}'
         case _:
             print('UNDEFINED', ast)
             return ''
@@ -148,7 +158,7 @@ def equiv(left: AST, right: AST,align=False) -> str:
 def save_file(tex_source,file):
     pf = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../tex/prelude.tex'), 'r')
     prelude = pf.read()
-    source = prelude + '\\begin{document}\\maketitle\\begin{align*}' + tex_source + '\\end{align*}\\end{document}'
+    source = prelude + '\\begin{document}\\maketitle\\begin{gather*}' + tex_source + '\\end{gather*}\\end{document}'
     output_tex_file = os.path.join(os.path.abspath(os.getcwd()),'../tex/temp_out.tex')
     f = open(output_tex_file,'w')
     f.write(source)

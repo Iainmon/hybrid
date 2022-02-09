@@ -205,7 +205,13 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
         return super().visitIf_stmt(ctx)
 
     def visitQuery_statement(self, ctx: HybLangParser.Query_statementContext):
-        return {"query": self.visit(ctx.show_query_statement())}
+        children = non_terminal_children(ctx)
+        visited = list(map(self.visit, children))
+        match visited:
+            case [c]:
+                return {"query": c}
+        print('Fail!', visited)
+        # return {"query": self.visit(ctx.show_query_statement() or ctx.write_query_statement())}
 
     def visitShow_query_statement(self, ctx: HybLangParser.Show_query_statementContext):
         return {"show_query": self.visit(ctx.query_expression())}
@@ -226,6 +232,8 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
                 return {
                     "query_relation": {"lhs": lhs, "relation": relation, "rhs": rhs}
                 }
+            case ['write', _,string_lit,_]:
+                return {'write': string_lit}
             case ['(',e,')']:
                 return e
             case [{'id':name}]:
@@ -233,8 +241,13 @@ class RawSyntaxTreeVisitor(HybLangVisitor):
             case _:
                 print('Failed!', visited)
 
-        # return super().visitQuery_expression(ctx)
+    def visitString_literal(self, ctx: HybLangParser.String_literalContext):
+        str_lit = ctx.STRING_LITERAL()
+        body = str_lit.getText() if isinstance(str_lit,TerminalNodeImpl) else '""'
+        return {'string': (body or '""')[1:-1]}
 
+    def visitWrite_query_statement(self, ctx: HybLangParser.Write_query_statementContext):
+        return {'write_query': self.visit(ctx.string_literal())}
     def aggregateResult(self, aggregate, nextResult):
         return nextResult
         return (aggregate or []) + [nextResult]

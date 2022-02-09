@@ -10,13 +10,13 @@ lib [WeekFour] : {
     }
     rout BirthdayProb(q,N) : {
 
-        return 1 - bdp(q,N)
+        return 1 - bdp(q,N);
     }
 }
 
 lib [real] : {
-    rout ctxt(x,y : {'true','false'},) : {
-        z <- {'true','false'},;
+    rout ctxt(x,y : {'true','false'}) : {
+        z <- {'true','false'};
         if x * y then : {
             return z;
         }
@@ -24,8 +24,8 @@ lib [real] : {
     }
 }
 lib [rand] : {
-    rout ctxt(x,y : {'true','false'},) : {
-        z <- {'true','false'},;
+    rout ctxt(x,y : {'true','false'}) : {
+        z <- {'true','false'};
         return z;
     }
 }
@@ -37,7 +37,17 @@ lib [david] : {
         return c;
     }
 }
+"You can write your homework completely in HybLang!".
 
 show lib[rand] == lib[rand] ~= lib[WeekFour].
+
+"This holds because of the proof in section 4.15, then it follows".
+
 show pro[A] <> lib[rand].
 show (pro[A] <> lib[iain] <> lib[david] <> lib[rudy]) ~= lib[nick].
+
+"so we know that".
+show pro[A].
+"is a distinguisher with non-negligible advantage, so it is not the case".
+show (lib[iain] <> lib[david] <> lib[rudy]) | write["and"] | lib[nick]. 
+"are indistinguishable, thus proving our claim.".

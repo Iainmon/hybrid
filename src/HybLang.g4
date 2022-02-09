@@ -4,8 +4,9 @@ grammar HybLang;
 
 IDENTIFIER  :   [a-zA-Z]+ ;      // match identifiers <label id="code.tour.expr.3"/>
 NUMBER :   [0-9]+ ;         // match integers
-NEWLINE:'\r'? '\n' -> skip;     // return newlines to parser (is end-statement signal)
+NEWLINE:'\r'? '\n' -> skip ;     // return newlines to parser (is end-statement signal)
 WS  :   [ \t]+ -> skip ; // toss out whitespace
+LINE_COMMENT : '--' ~[\r\n]* -> skip ;
 SET_LIT : [0-9a-zA-Z];
 
 
@@ -21,6 +22,10 @@ BLOCKSTART : ':';
 LSQBRACK : '[';
 RSQBRACK : ']';
 BIN_OP : '+' | '-' | '*' | '/' | 'xor' | '&' | '||' | '^' | 'is';
+fragment CHAR : ~["\\\r\n];
+fragment CHARS : CHAR+;
+STRING_LITERAL : '"' CHARS? '"';
+// fragment CHARS : CHAR+;
 
 // program: statement (NEWLINE+ statement)* NEWLINE*;
 program: procedure;
@@ -28,6 +33,8 @@ program: procedure;
 bin_op: '+' | '-' | '*' | '/' | 'xor' | '&' | '||' | '^' | 'is';
 
 identifier : IDENTIFIER;
+
+string_literal : STRING_LITERAL;
 
 function_call: IDENTIFIER LPAREN (expression (',' expression)*)? RPAREN;
 
@@ -71,11 +78,14 @@ exposing_sequence : ('rout'|'func'|'var') IDENTIFIER (','('func'|'var') IDENTIFI
 library_def : ('lib' | 'library') '[' IDENTIFIER ']' ('exposing' '(' exposing_sequence? ')')? block;
 
 
-query_statement : show_query_statement ;
+query_statement : show_query_statement | write_query_statement ;
 show_query_statement : 'show' query_expression '.';
-query_relation : '<>' | '==' | '~=' | '=>' ;
+write_query_statement : string_literal '.';
+
+query_relation : '<>' | '==' | '~=' | '=>' | '|' ;
 query_expression : LPAREN query_expression RPAREN 
                  | query_expression query_relation query_expression 
                  | ('pro' | 'program' | 'lib' | 'library') '[' IDENTIFIER ']'
+                 | 'write' '[' string_literal ']'
                  | IDENTIFIER 
                  ;

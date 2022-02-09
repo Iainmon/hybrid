@@ -5,9 +5,10 @@
 
 
 \usepackage{mikerosu}
-\usepackage[a1paper, margin=4cm]{geometry}
+% \usepackage[a1paper, margin=4cm]{geometry}
 % \usepackage[a3paper, margin=2cm]{geometry}
 % \usepackage[a4paper]{geometry}
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mathtools}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
@@ -23,4 +24,22 @@
 %%%%
 
 
-\begin{document}\maketitle\begin{align*}&\\&\titlecodebox{ \lib{rand} }{\underline{$\subname{ctxt}(x, y \in \{\str{true},\str{false}\}, ):$}\\\> $z \lar \{\str{true},\str{false}\}$\\\> return $z$}\equiv\titlecodebox{ \lib{rand} }{\underline{$\subname{ctxt}(x, y \in \{\str{true},\str{false}\}, ):$}\\\> $z \lar \{\str{true},\str{false}\}$\\\> return $z$}\indist\titlecodebox{ \lib{WeekFour} }{\underline{$\subname{bdp}(q, N):$}\\\> if $\subname{LessThan}(q, 1)$ then:\\\>\> return $1$\\\> $p := 1 - q / N$\\\> return $p \cdot \subname{bdp}(q - 1, N)$\\\underline{$\subname{BirthdayProb}(q, N):$}\\\> return $1 - \subname{bdp}(q, N)$}\quad\\&\titlecodebox{\fancy{A} }{$m \lar \{\bit0,\bit1\}$\\$c := \subname{ctxt}(m)$\\$j \lar \{\str{a},\str{b},\str{c}\}$\\return $c \oplus k || j$}\link\titlecodebox{ \lib{rand} }{\underline{$\subname{ctxt}(x, y \in \{\str{true},\str{false}\}, ):$}\\\> $z \lar \{\str{true},\str{false}\}$\\\> return $z$}\quad\\&\titlecodebox{\fancy{A} }{$m \lar \{\bit0,\bit1\}$\\$c := \subname{ctxt}(m)$\\$j \lar \{\str{a},\str{b},\str{c}\}$\\return $c \oplus k || j$}\link\lib{iain}\link\titlecodebox{ \lib{david} }{\underline{$\subname{Enc}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c$}\link\lib{rudy}\indist\lib{nick}\end{align*}\end{document}
+\begin{document}\maketitle\begin{gather*}\end{gather*}
+\\\text{You can write your homework completely in HybLang!}
+\begin{gather*}\quad\end{gather*}
+\\\text{We are tasked to show that}
+\begin{gather*}\quad\\\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\equiv\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\quad\end{gather*}
+\\\text{are interchangeable.}
+\begin{gather*}\quad\end{gather*}
+\\\text{This obviously not the case, since the distinguishing program}
+\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\quad\end{gather*}
+\\\text{always returns true when linked to the L library. Since we have}
+\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\implies\text{true}\quad\end{gather*}
+\\\text{and}
+\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\implies\text{$1/2$}\quad\end{gather*}
+\\\text{so we know that}
+\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\quad\end{gather*}
+\\\text{is a distinguishing program, so it is not the case that}
+\begin{gather*}\quad\\\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\quad\text{and}\quad\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\quad\end{gather*}
+\\\text{are interchangeable, thus proving a counterexample of the claim.}
+\begin{gather*}\end{gather*}\end{document}

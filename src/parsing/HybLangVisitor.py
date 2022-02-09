@@ -24,6 +24,11 @@ class HybLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by HybLangParser#string_literal.
+    def visitString_literal(self, ctx:HybLangParser.String_literalContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by HybLangParser#function_call.
     def visitFunction_call(self, ctx:HybLangParser.Function_callContext):
         return self.visitChildren(ctx)
@@ -121,6 +126,11 @@ class HybLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by HybLangParser#show_query_statement.
     def visitShow_query_statement(self, ctx:HybLangParser.Show_query_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by HybLangParser#write_query_statement.
+    def visitWrite_query_statement(self, ctx:HybLangParser.Write_query_statementContext):
         return self.visitChildren(ctx)
 
 

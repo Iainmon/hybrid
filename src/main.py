@@ -33,7 +33,7 @@ libs = definition_libraries(ast)
 #     source += latex.equiv(libs[i],libs[i+1]) + '\\implies&' +f'{latex.link(progA,libs[i],glowing=True)}\\equiv {latex.link(progA,libs[i+1],glowing=True)}' + '\\\\'
 
 # latex.save_file(source,'output.pdf')
-file_name = '../examples/birthday_prob.rosu'
+file_name = '../examples/example.rosu'
 tex_source = latex.texify(syntax.Definitions(syntax.construct_ast(parser.file_to_ast_dict(file_name))))
 latex.save_file(tex_source, file_name)
 print(tex_source)

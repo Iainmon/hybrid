@@ -161,6 +161,12 @@
 %}
 }
 
+\newcommand{\comment}[1]{%
+    \begin{minipage}{.2\textwidth}%
+    #1%
+    \end{minipage}%
+}
+
 %% bits
 \newcommand{\bit}[1]{\textcolor{bitcolor}{\texttt{\upshape #1}}}
 \newcommand{\bits}{\{\bit0,\bit1\}}
