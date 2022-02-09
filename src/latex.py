@@ -56,7 +56,10 @@ context = {
     'program' : {}
 }
 
+is_in_math_block = False
+depth = 0
 def texify(ast: AST,queries_only = True) -> str:
+    global is_in_math_block
     match ast:
         case Identifier(id):
             return id
@@ -65,7 +68,9 @@ def texify(ast: AST,queries_only = True) -> str:
                 return f'\\bit{n}'
             return str(n)
         case String(string):
-            return '\\\\\\text{' + string + '}'
+            if is_in_math_block:
+                return '\\text{' + string + '}'
+            return string
         case Assignment(lhs,rhs):
             return f'${texify(lhs)} := {texify(rhs)}$'
         case Sample(lhs,rhs):
@@ -117,7 +122,11 @@ def texify(ast: AST,queries_only = True) -> str:
             if queries_only:
                 for line in definitions:
                     texify(line) # populates context
-                return '\\quad'.join(texify(line) for line in definitions if isinstance(line,QueryStatement))
+                source = ''.join(texify(line) for line in definitions if isinstance(line,QueryStatement))
+                if is_in_math_block:
+                    is_in_math_block = False
+                    source += '\\end{gather*}'
+                return source
             return '\\quad'.join(texify(line) for line in definitions)
         case ProgramReference(name):
             if name in context['program'].keys():
@@ -128,13 +137,23 @@ def texify(ast: AST,queries_only = True) -> str:
                 return texify(context['library'][name])
             return '\\lib{' + name + '}'
         case ShowQueryStatement(expr):
-            return '\\\\' + texify(expr)
+            if is_in_math_block:
+                return texify(expr)
+            else:
+                is_in_math_block = True
+                return '\\begin{gather*}\n' + texify(expr)
         case QueryRelation(lhs,relation,rhs):
             return texify(lhs) + texify_relation(relation) + texify(rhs)
         case Write(String(comment)):
-            return '\\text{' + comment + '}'
+            if is_in_math_block:
+                return '\\text{' + comment + '}'
+            else:
+                return comment
         case WriteQueryStatement(String(comment)):
-            return '\\end{gather*}\n' + texify(String(comment)) + '\n\\begin{gather*}'
+            if is_in_math_block:
+                is_in_math_block = False
+                return '\\end{gather*}\n' + texify(String(comment)) + ' '
+            return texify(String(comment)) + ' '
         case _:
             print('UNDEFINED', ast)
             return ''
@@ -158,7 +177,7 @@ def equiv(left: AST, right: AST,align=False) -> str:
 def save_file(tex_source,file):
     pf = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../tex/prelude.tex'), 'r')
     prelude = pf.read()
-    source = prelude + '\\begin{document}\\maketitle\\begin{gather*}' + tex_source + '\\end{gather*}\\end{document}'
+    source = prelude + '\\begin{document} ' + tex_source + '\\end{document}'
     output_tex_file = os.path.join(os.path.abspath(os.getcwd()),'../tex/temp_out.tex')
     f = open(output_tex_file,'w')
     f.write(source)

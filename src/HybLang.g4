@@ -22,7 +22,7 @@ BLOCKSTART : ':';
 LSQBRACK : '[';
 RSQBRACK : ']';
 BIN_OP : '+' | '-' | '*' | '/' | 'xor' | '&' | '||' | '^' | 'is';
-fragment CHAR : ~["\\\r\n];
+fragment CHAR : ~["];
 fragment CHARS : CHAR+;
 STRING_LITERAL : '"' CHARS? '"';
 // fragment CHARS : CHAR+;

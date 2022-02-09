@@ -24,22 +24,23 @@
 %%%%
 
 
-\begin{document}\maketitle\begin{gather*}\end{gather*}
-\\\text{You can write your homework completely in HybLang!}
-\begin{gather*}\quad\end{gather*}
-\\\text{We are tasked to show that}
-\begin{gather*}\quad\\\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\equiv\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\quad\end{gather*}
-\\\text{are interchangeable.}
-\begin{gather*}\quad\end{gather*}
-\\\text{This obviously not the case, since the distinguishing program}
-\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\quad\end{gather*}
-\\\text{always returns true when linked to the L library. Since we have}
-\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\implies\text{true}\quad\end{gather*}
-\\\text{and}
-\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\implies\text{$1/2$}\quad\end{gather*}
-\\\text{so we know that}
-\begin{gather*}\quad\\\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\quad\end{gather*}
-\\\text{is a distinguishing program, so it is not the case that}
-\begin{gather*}\quad\\\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\quad\text{and}\quad\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\quad\end{gather*}
-\\\text{are interchangeable, thus proving a counterexample of the claim.}
-\begin{gather*}\end{gather*}\end{document}
+\begin{document} You can write your homework completely in HybLang! 
+You can even put raw \LaTeX in the annotations in HybLang! Is it just me or is 
+
+$$
+\pi \approx 3 !
+$$
+
+We are tasked to show that \begin{gather*}
+\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\equiv\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\end{gather*}
+are interchangeable. This obviously not the case, since the distinguishing program \begin{gather*}
+\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\end{gather*}
+always returns true when linked to library L. Since we have \begin{gather*}
+\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\implies\text{true}\end{gather*}
+and \begin{gather*}
+\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\link\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\implies\text{$\frac{1}{2}$}\end{gather*}
+so we know that \begin{gather*}
+\titlecodebox{\fancy{A} }{$m := \bit0$\\$c := \subname{ctxt}(m)$\\return $m \overset{?}{=} \bit0$}\end{gather*}
+is a distinguishing program, so it is not the case that \begin{gather*}
+\titlecodebox{ \lib{L} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c \& m$}\quad\text{and}\quad\titlecodebox{ \lib{R} }{\underline{$\subname{ctxt}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\end{gather*}
+are interchangeable, thus proving a counterexample of the claim. \end{document}

@@ -19,16 +19,22 @@ pro [A] : {
 }
 
 
-"You can write your homework completely in HybLang!".
-"We are tasked to show that".
+"You can write your homework completely in HybLang! 
+You can even put raw \LaTeX in the annotations in HybLang! Is it just me or is 
+
+$$
+\pi \approx 3 !
+$$
+
+We are tasked to show that".
 show lib[L] == lib[R].
 "are interchangeable.".
 "This obviously not the case, since the distinguishing program". 
 show pro[A].
-"always returns true when linked to the L library. Since we have".
+"always returns true when linked to library L. Since we have".
 show pro[A] <> lib[L] => write["true"].
 "and".
-show pro[A] <> lib[R] => write["$1/2$"].
+show pro[A] <> lib[R] => write["$\frac{1}{2}$"].
 "so we know that".
 show pro[A].
 "is a distinguishing program, so it is not the case that".
