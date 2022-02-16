@@ -1,0 +1,431 @@
+:py:mod:`hybrid.syntax`
+=======================
+
+.. py:module:: hybrid.syntax
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.syntax.AST
+   hybrid.syntax.Statement
+   hybrid.syntax.NonStatement
+   hybrid.syntax.Block
+   hybrid.syntax.Definitions
+   hybrid.syntax.Expression
+   hybrid.syntax.Literal
+   hybrid.syntax.Identifier
+   hybrid.syntax.Number
+   hybrid.syntax.String
+   hybrid.syntax.BinaryOperation
+   hybrid.syntax.FunctionCall
+   hybrid.syntax.Assignment
+   hybrid.syntax.Sample
+   hybrid.syntax.Return
+   hybrid.syntax.SetAtom
+   hybrid.syntax.NumberSetAtom
+   hybrid.syntax.IdentifierSetAtom
+   hybrid.syntax.SetLiteral
+   hybrid.syntax.FunctionArgument
+   hybrid.syntax.FunctionArguments
+   hybrid.syntax.FunctionDefinition
+   hybrid.syntax.IfStatement
+   hybrid.syntax.CallingProgramDefinition
+   hybrid.syntax.LibraryDefinition
+   hybrid.syntax.QueryExpression
+   hybrid.syntax.QueryIdentifier
+   hybrid.syntax.QueryStatement
+   hybrid.syntax.ProgramReference
+   hybrid.syntax.LibraryReference
+   hybrid.syntax.QueryRelation
+   hybrid.syntax.Write
+   hybrid.syntax.ShowQueryStatement
+   hybrid.syntax.WriteQueryStatement
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.syntax.construct_ast
+
+
+
+.. py:class:: AST
+
+
+.. py:class:: Statement
+
+   Bases: :py:obj:`AST`
+
+
+.. py:class:: NonStatement
+
+   Bases: :py:obj:`AST`
+
+
+.. py:class:: Block
+
+   Bases: :py:obj:`AST`
+
+   .. py:attribute:: procedure
+      :annotation: :list[Statement | NonStatement]
+
+      
+
+
+.. py:class:: Definitions
+
+   Bases: :py:obj:`AST`
+
+   .. py:attribute:: body
+      :annotation: :Block
+
+      
+
+
+.. py:class:: Expression
+
+   Bases: :py:obj:`Statement`
+
+
+.. py:class:: Literal
+
+   Bases: :py:obj:`Expression`
+
+
+.. py:class:: Identifier
+
+   Bases: :py:obj:`Literal`
+
+   .. py:attribute:: id
+      :annotation: :str
+
+      
+
+
+.. py:class:: Number
+
+   Bases: :py:obj:`Literal`
+
+   .. py:attribute:: num
+      :annotation: :int
+
+      
+
+
+.. py:class:: String
+
+   Bases: :py:obj:`Literal`
+
+   .. py:attribute:: string
+      :annotation: :str
+
+      
+
+
+.. py:class:: BinaryOperation
+
+   Bases: :py:obj:`Expression`
+
+   .. py:attribute:: lhs
+      :annotation: :Expression
+
+      
+
+   .. py:attribute:: bin_op
+      :annotation: :str
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :Expression
+
+      
+
+
+.. py:class:: FunctionCall
+
+   Bases: :py:obj:`Expression`
+
+   .. py:attribute:: fun_name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: args
+      :annotation: :list[Expression]
+
+      
+
+
+.. py:class:: Assignment
+
+   Bases: :py:obj:`Statement`
+
+   .. py:attribute:: lhs
+      :annotation: :Identifier
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :Expression
+
+      
+
+
+.. py:class:: Sample
+
+   Bases: :py:obj:`Statement`
+
+   .. py:attribute:: lhs
+      :annotation: :Identifier
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :Expression | Any
+
+      
+
+
+.. py:class:: Return
+
+   Bases: :py:obj:`Statement`
+
+   .. py:attribute:: ret
+      :annotation: :Expression
+
+      
+
+
+.. py:class:: SetAtom
+
+   Bases: :py:obj:`AST`
+
+
+.. py:class:: NumberSetAtom
+
+   Bases: :py:obj:`SetAtom`
+
+   .. py:attribute:: num
+      :annotation: :int
+
+      
+
+
+.. py:class:: IdentifierSetAtom
+
+   Bases: :py:obj:`SetAtom`
+
+   .. py:attribute:: id
+      :annotation: :str
+
+      
+
+
+.. py:class:: SetLiteral
+
+   Bases: :py:obj:`AST`
+
+   .. py:attribute:: data
+      :annotation: :list[SetAtom]
+
+      
+
+
+.. py:class:: FunctionArgument
+
+   Bases: :py:obj:`AST`
+
+   .. py:attribute:: arg_id
+      :annotation: :str
+
+      
+
+   .. py:attribute:: arg_type
+      :annotation: :Optional[SetLiteral]
+
+      
+
+
+.. py:class:: FunctionArguments
+
+   Bases: :py:obj:`AST`
+
+   .. py:attribute:: args
+      :annotation: :list[tuple[int, FunctionArgument]]
+
+      
+
+
+.. py:class:: FunctionDefinition
+
+   Bases: :py:obj:`NonStatement`
+
+   .. py:attribute:: fun_name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: args
+      :annotation: :FunctionArguments
+
+      
+
+   .. py:attribute:: block
+      :annotation: :Block
+
+      
+
+
+.. py:class:: IfStatement
+
+   Bases: :py:obj:`NonStatement`
+
+   .. py:attribute:: condition
+      :annotation: :Expression
+
+      
+
+   .. py:attribute:: then_block
+      :annotation: :Block
+
+      
+
+   .. py:attribute:: else_block
+      :annotation: :Optional[Block]
+
+      
+
+
+.. py:class:: CallingProgramDefinition
+
+   Bases: :py:obj:`NonStatement`
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: body
+      :annotation: :Block
+
+      
+
+
+.. py:class:: LibraryDefinition
+
+   Bases: :py:obj:`NonStatement`
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+   .. py:attribute:: exposing
+      :annotation: :list[tuple[str, str]]
+
+      
+
+   .. py:attribute:: body
+      :annotation: :Block
+
+      
+
+
+.. py:class:: QueryExpression
+
+   Bases: :py:obj:`AST`
+
+
+.. py:class:: QueryIdentifier
+
+   Bases: :py:obj:`QueryExpression`
+
+
+.. py:class:: QueryStatement
+
+   Bases: :py:obj:`NonStatement`
+
+
+.. py:class:: ProgramReference
+
+   Bases: :py:obj:`QueryIdentifier`
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+
+.. py:class:: LibraryReference
+
+   Bases: :py:obj:`QueryIdentifier`
+
+   .. py:attribute:: name
+      :annotation: :str
+
+      
+
+
+.. py:class:: QueryRelation
+
+   Bases: :py:obj:`QueryExpression`
+
+   .. py:attribute:: lhs
+      :annotation: :QueryExpression
+
+      
+
+   .. py:attribute:: relation
+      :annotation: :str
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :QueryExpression
+
+      
+
+
+.. py:class:: Write
+
+   Bases: :py:obj:`QueryExpression`
+
+   .. py:attribute:: body
+      :annotation: :String
+
+      
+
+
+.. py:class:: ShowQueryStatement
+
+   Bases: :py:obj:`QueryStatement`
+
+   .. py:attribute:: expression
+      :annotation: :QueryExpression
+
+      
+
+
+.. py:class:: WriteQueryStatement
+
+   Bases: :py:obj:`QueryStatement`
+
+   .. py:attribute:: body
+      :annotation: :Write
+
+      
+
+
+.. py:function:: construct_ast(parse_tree) -> Any
+
+

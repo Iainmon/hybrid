@@ -1,0 +1,149 @@
+:py:mod:`hybrid.parser`
+=======================
+
+.. py:module:: hybrid.parser
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.parser.RawSyntaxTreeVisitor
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.parser.get_rule_name
+   hybrid.parser.get_children_derivation_names
+   hybrid.parser.copy_context
+   hybrid.parser.expand_all_derivations
+   hybrid.parser.non_terminal_children
+   hybrid.parser.file_to_ast_dict
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.parser.NonTerminalName
+
+
+.. py:data:: NonTerminalName
+   
+
+   
+
+.. py:function:: get_rule_name(node: antlr4.tree.Tree.Tree) -> str
+
+
+.. py:function:: get_children_derivation_names(node: antlr4.tree.Tree.Tree)
+
+
+.. py:function:: copy_context(node)
+
+
+.. py:function:: expand_all_derivations(node: antlr4.ParserRuleContext.ParserRuleContext)
+
+
+.. py:function:: non_terminal_children(ctx)
+
+
+.. py:class:: RawSyntaxTreeVisitor
+
+   Bases: :py:obj:`hybrid.parsing.HybLangVisitor.HybLangVisitor`
+
+   .. py:method:: visitProgram(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.ProgramContext)
+
+
+   .. py:method:: visitProcedure(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.ProcedureContext)
+
+
+   .. py:method:: visitCall_prog_def(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Call_prog_defContext)
+
+
+   .. py:method:: visitLibrary_def(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Library_defContext)
+
+
+   .. py:method:: visitBlock(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.BlockContext)
+
+
+   .. py:method:: visitStatement(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.StatementContext)
+
+
+   .. py:method:: visitAssignment(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.AssignmentContext)
+
+
+   .. py:method:: visitSample(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.SampleContext)
+
+
+   .. py:method:: visitSet_type(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Set_typeContext)
+
+
+   .. py:method:: visitSet_lit(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Set_litContext)
+
+
+   .. py:method:: visitExpression(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.ExpressionContext)
+
+
+   .. py:method:: visitBin_op(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Bin_opContext)
+
+
+   .. py:method:: visitFunction_call(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Function_callContext)
+
+
+   .. py:method:: visitReturn_stmt(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Return_stmtContext)
+
+
+   .. py:method:: visitFunction_arguments(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Function_argumentsContext)
+
+
+   .. py:method:: visitFunction_argument(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Function_argumentContext)
+
+
+   .. py:method:: visitFunction_def(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Function_defContext)
+
+
+   .. py:method:: visitTerminal(self, node: antlr4.tree.Tree.TerminalNodeImpl)
+
+
+   .. py:method:: visitIf_stmt(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.If_stmtContext)
+
+
+   .. py:method:: visitQuery_statement(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Query_statementContext)
+
+
+   .. py:method:: visitShow_query_statement(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Show_query_statementContext)
+
+
+   .. py:method:: visitQuery_relation(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Query_relationContext)
+
+
+   .. py:method:: visitQuery_expression(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Query_expressionContext)
+
+
+   .. py:method:: visitString_literal(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.String_literalContext)
+
+
+   .. py:method:: visitWrite_query_statement(self, ctx: hybrid.parsing.HybLangParser.HybLangParser.Write_query_statementContext)
+
+
+   .. py:method:: aggregateResult(self, aggregate, nextResult)
+
+
+   .. py:method:: defaultResult(self)
+
+
+
+.. py:function:: file_to_ast_dict(file)
+
+

@@ -1,3 +1,5 @@
+"\section*{My Hybrid Proof}".
+
 lib [L] : {
     rout ctxt(m : {0,1}) : {
         k <- {0,1};

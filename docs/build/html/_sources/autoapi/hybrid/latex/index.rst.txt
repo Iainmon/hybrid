@@ -1,0 +1,145 @@
+:py:mod:`hybrid.latex`
+======================
+
+.. py:module:: hybrid.latex
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.latex.Stylizer
+   hybrid.latex.Relation
+   hybrid.latex.HighlightExpression
+   hybrid.latex.Link
+   hybrid.latex.Interchangable
+   hybrid.latex.Indistinguishable
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.latex.bin_op_tex
+   hybrid.latex.texify_relation
+   hybrid.latex.texify
+   hybrid.latex.link
+   hybrid.latex.equiv
+   hybrid.latex.save_file
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.latex.context
+   hybrid.latex.is_in_math_block
+   hybrid.latex.depth
+
+
+.. py:class:: Stylizer
+
+   Bases: :py:obj:`hybrid.syntax.AST`
+
+
+.. py:class:: Relation
+
+   Bases: :py:obj:`Stylizer`
+
+
+.. py:class:: HighlightExpression
+
+   Bases: :py:obj:`Stylizer`
+
+   .. py:attribute:: expression
+      :annotation: :hybrid.syntax.AST
+
+      
+
+
+.. py:class:: Link
+
+   Bases: :py:obj:`Relation`
+
+   .. py:attribute:: lhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+
+.. py:class:: Interchangable
+
+   Bases: :py:obj:`Relation`
+
+   .. py:attribute:: lhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+
+.. py:class:: Indistinguishable
+
+   Bases: :py:obj:`Relation`
+
+   .. py:attribute:: lhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+   .. py:attribute:: rhs
+      :annotation: :hybrid.syntax.AST
+
+      
+
+
+.. py:function:: bin_op_tex(op: str) -> str
+
+
+.. py:function:: texify_relation(relation: str) -> str
+
+
+.. py:data:: context
+   
+
+   
+
+.. py:data:: is_in_math_block
+   :annotation: = False
+
+   
+
+.. py:data:: depth
+   :annotation: = 0
+
+   
+
+.. py:function:: texify(ast: hybrid.syntax.AST, queries_only=True) -> str
+
+
+.. py:function:: link(prog: hybrid.syntax.AST, lib: hybrid.syntax.LibraryDefinition, glowing=False) -> str
+
+
+.. py:function:: equiv(left: hybrid.syntax.AST, right: hybrid.syntax.AST, align=False) -> str
+
+
+.. py:function:: save_file(tex_source, file)
+
+

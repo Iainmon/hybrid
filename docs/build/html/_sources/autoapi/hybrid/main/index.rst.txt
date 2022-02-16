@@ -1,0 +1,44 @@
+:py:mod:`hybrid.main`
+=====================
+
+.. py:module:: hybrid.main
+
+
+Module Contents
+---------------
+
+.. py:data:: parse_tree
+   
+
+   
+
+.. py:data:: ast
+   
+
+   
+
+.. py:data:: tex_source
+   
+
+   
+
+.. py:data:: progA
+   
+
+   
+
+.. py:data:: libs
+   
+
+   
+
+.. py:data:: file_name
+   :annotation: = ../examples/example.rosu
+
+   
+
+.. py:data:: tex_source
+   
+
+   
+

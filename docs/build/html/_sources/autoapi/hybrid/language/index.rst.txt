@@ -1,0 +1,26 @@
+:py:mod:`hybrid.language`
+=========================
+
+.. py:module:: hybrid.language
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   hybrid.language.definition_libraries
+   hybrid.language.definition_calling_programs
+
+
+
+.. py:function:: definition_libraries(ast) -> list[hybrid.syntax.LibraryDefinition]
+
+
+.. py:function:: definition_calling_programs(ast) -> list[hybrid.syntax.CallingProgramDefinition]
+
+

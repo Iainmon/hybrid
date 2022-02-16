@@ -1,0 +1,330 @@
+:py:mod:`HybLangLexer`
+======================
+
+.. py:module:: HybLangLexer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   HybLangLexer.HybLangLexer
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   HybLangLexer.serializedATN
+
+
+
+.. py:function:: serializedATN()
+
+
+.. py:class:: HybLangLexer(input=None, output: TextIO = sys.stdout)
+
+   Bases: :py:obj:`antlr4.Lexer`
+
+   .. py:attribute:: atn
+      
+
+      
+
+   .. py:attribute:: decisionsToDFA
+      
+
+      
+
+   .. py:attribute:: T__0
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: T__1
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: T__2
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: T__3
+      :annotation: = 4
+
+      
+
+   .. py:attribute:: T__4
+      :annotation: = 5
+
+      
+
+   .. py:attribute:: T__5
+      :annotation: = 6
+
+      
+
+   .. py:attribute:: T__6
+      :annotation: = 7
+
+      
+
+   .. py:attribute:: T__7
+      :annotation: = 8
+
+      
+
+   .. py:attribute:: T__8
+      :annotation: = 9
+
+      
+
+   .. py:attribute:: T__9
+      :annotation: = 10
+
+      
+
+   .. py:attribute:: T__10
+      :annotation: = 11
+
+      
+
+   .. py:attribute:: T__11
+      :annotation: = 12
+
+      
+
+   .. py:attribute:: T__12
+      :annotation: = 13
+
+      
+
+   .. py:attribute:: T__13
+      :annotation: = 14
+
+      
+
+   .. py:attribute:: T__14
+      :annotation: = 15
+
+      
+
+   .. py:attribute:: T__15
+      :annotation: = 16
+
+      
+
+   .. py:attribute:: T__16
+      :annotation: = 17
+
+      
+
+   .. py:attribute:: T__17
+      :annotation: = 18
+
+      
+
+   .. py:attribute:: T__18
+      :annotation: = 19
+
+      
+
+   .. py:attribute:: T__19
+      :annotation: = 20
+
+      
+
+   .. py:attribute:: T__20
+      :annotation: = 21
+
+      
+
+   .. py:attribute:: T__21
+      :annotation: = 22
+
+      
+
+   .. py:attribute:: T__22
+      :annotation: = 23
+
+      
+
+   .. py:attribute:: T__23
+      :annotation: = 24
+
+      
+
+   .. py:attribute:: T__24
+      :annotation: = 25
+
+      
+
+   .. py:attribute:: T__25
+      :annotation: = 26
+
+      
+
+   .. py:attribute:: T__26
+      :annotation: = 27
+
+      
+
+   .. py:attribute:: T__27
+      :annotation: = 28
+
+      
+
+   .. py:attribute:: T__28
+      :annotation: = 29
+
+      
+
+   .. py:attribute:: T__29
+      :annotation: = 30
+
+      
+
+   .. py:attribute:: T__30
+      :annotation: = 31
+
+      
+
+   .. py:attribute:: T__31
+      :annotation: = 32
+
+      
+
+   .. py:attribute:: IDENTIFIER
+      :annotation: = 33
+
+      
+
+   .. py:attribute:: NUMBER
+      :annotation: = 34
+
+      
+
+   .. py:attribute:: NEWLINE
+      :annotation: = 35
+
+      
+
+   .. py:attribute:: WS
+      :annotation: = 36
+
+      
+
+   .. py:attribute:: LINE_COMMENT
+      :annotation: = 37
+
+      
+
+   .. py:attribute:: SET_LIT
+      :annotation: = 38
+
+      
+
+   .. py:attribute:: LPAREN
+      :annotation: = 39
+
+      
+
+   .. py:attribute:: RPAREN
+      :annotation: = 40
+
+      
+
+   .. py:attribute:: LBRACK
+      :annotation: = 41
+
+      
+
+   .. py:attribute:: RBRACK
+      :annotation: = 42
+
+      
+
+   .. py:attribute:: ASSIGN
+      :annotation: = 43
+
+      
+
+   .. py:attribute:: SAMPLE
+      :annotation: = 44
+
+      
+
+   .. py:attribute:: SEPARATOR
+      :annotation: = 45
+
+      
+
+   .. py:attribute:: SEQSEP
+      :annotation: = 46
+
+      
+
+   .. py:attribute:: BLOCKSTART
+      :annotation: = 47
+
+      
+
+   .. py:attribute:: LSQBRACK
+      :annotation: = 48
+
+      
+
+   .. py:attribute:: RSQBRACK
+      :annotation: = 49
+
+      
+
+   .. py:attribute:: BIN_OP
+      :annotation: = 50
+
+      
+
+   .. py:attribute:: STRING_LITERAL
+      :annotation: = 51
+
+      
+
+   .. py:attribute:: channelNames
+      :annotation: = ['DEFAULT_TOKEN_CHANNEL', 'HIDDEN']
+
+      
+
+   .. py:attribute:: modeNames
+      :annotation: = ['DEFAULT_MODE']
+
+      
+
+   .. py:attribute:: literalNames
+      :annotation: = ['<INVALID>', "'+'", "'-'", "'*'", "'/'", "'xor'", "'&'", "'||'", "'^'", "'is'", "'return'",...
+
+      
+
+   .. py:attribute:: symbolicNames
+      :annotation: = ['<INVALID>', 'IDENTIFIER', 'NUMBER', 'NEWLINE', 'WS', 'LINE_COMMENT', 'SET_LIT', 'LPAREN',...
+
+      
+
+   .. py:attribute:: ruleNames
+      :annotation: = ['T__0', 'T__1', 'T__2', 'T__3', 'T__4', 'T__5', 'T__6', 'T__7', 'T__8', 'T__9', 'T__10',...
+
+      
+
+   .. py:attribute:: grammarFileName
+      :annotation: = HybLang.g4
+
+      
+
+

@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HybLangVisitor &#8212; hybrid 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-HybLangVisitor">
+<span id="hyblangvisitor"></span><h1><a class="reference internal" href="#module-HybLangVisitor" title="HybLangVisitor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">HybLangVisitor</span></code></a><a class="headerlink" href="#module-HybLangVisitor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#HybLangVisitor.HybLangVisitor" title="HybLangVisitor.HybLangVisitor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HybLangVisitor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">HybLangVisitor.</span></span><span class="sig-name descname"><span class="pre">HybLangVisitor</span></span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">antlr4.ParseTreeVisitor</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitProgram">
+<span class="sig-name descname"><span class="pre">visitProgram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.ProgramContext" title="HybLangParser.HybLangParser.ProgramContext"><span class="pre">HybLangParser.ProgramContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitProgram" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitBin_op">
+<span class="sig-name descname"><span class="pre">visitBin_op</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Bin_opContext" title="HybLangParser.HybLangParser.Bin_opContext"><span class="pre">HybLangParser.Bin_opContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitBin_op" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitIdentifier">
+<span class="sig-name descname"><span class="pre">visitIdentifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.IdentifierContext" title="HybLangParser.HybLangParser.IdentifierContext"><span class="pre">HybLangParser.IdentifierContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitString_literal">
+<span class="sig-name descname"><span class="pre">visitString_literal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.String_literalContext" title="HybLangParser.HybLangParser.String_literalContext"><span class="pre">HybLangParser.String_literalContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitString_literal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitFunction_call">
+<span class="sig-name descname"><span class="pre">visitFunction_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Function_callContext" title="HybLangParser.HybLangParser.Function_callContext"><span class="pre">HybLangParser.Function_callContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitFunction_call" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitExpression">
+<span class="sig-name descname"><span class="pre">visitExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.ExpressionContext" title="HybLangParser.HybLangParser.ExpressionContext"><span class="pre">HybLangParser.ExpressionContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitExpression" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitAssignment">
+<span class="sig-name descname"><span class="pre">visitAssignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.AssignmentContext" title="HybLangParser.HybLangParser.AssignmentContext"><span class="pre">HybLangParser.AssignmentContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitAssignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitSample">
+<span class="sig-name descname"><span class="pre">visitSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.SampleContext" title="HybLangParser.HybLangParser.SampleContext"><span class="pre">HybLangParser.SampleContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitSample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitReturn_stmt">
+<span class="sig-name descname"><span class="pre">visitReturn_stmt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Return_stmtContext" title="HybLangParser.HybLangParser.Return_stmtContext"><span class="pre">HybLangParser.Return_stmtContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitReturn_stmt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitStatement">
+<span class="sig-name descname"><span class="pre">visitStatement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.StatementContext" title="HybLangParser.HybLangParser.StatementContext"><span class="pre">HybLangParser.StatementContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitStatement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitProcedure">
+<span class="sig-name descname"><span class="pre">visitProcedure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.ProcedureContext" title="HybLangParser.HybLangParser.ProcedureContext"><span class="pre">HybLangParser.ProcedureContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitProcedure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitNon_statement">
+<span class="sig-name descname"><span class="pre">visitNon_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Non_statementContext" title="HybLangParser.HybLangParser.Non_statementContext"><span class="pre">HybLangParser.Non_statementContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitNon_statement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitSet_lit">
+<span class="sig-name descname"><span class="pre">visitSet_lit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Set_litContext" title="HybLangParser.HybLangParser.Set_litContext"><span class="pre">HybLangParser.Set_litContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitSet_lit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitSet_type">
+<span class="sig-name descname"><span class="pre">visitSet_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Set_typeContext" title="HybLangParser.HybLangParser.Set_typeContext"><span class="pre">HybLangParser.Set_typeContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitSet_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitFunction_argument">
+<span class="sig-name descname"><span class="pre">visitFunction_argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Function_argumentContext" title="HybLangParser.HybLangParser.Function_argumentContext"><span class="pre">HybLangParser.Function_argumentContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitFunction_argument" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitFunction_arguments">
+<span class="sig-name descname"><span class="pre">visitFunction_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Function_argumentsContext" title="HybLangParser.HybLangParser.Function_argumentsContext"><span class="pre">HybLangParser.Function_argumentsContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitFunction_arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitFunction_def">
+<span class="sig-name descname"><span class="pre">visitFunction_def</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Function_defContext" title="HybLangParser.HybLangParser.Function_defContext"><span class="pre">HybLangParser.Function_defContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitFunction_def" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitBlock">
+<span class="sig-name descname"><span class="pre">visitBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.BlockContext" title="HybLangParser.HybLangParser.BlockContext"><span class="pre">HybLangParser.BlockContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitIf_stmt">
+<span class="sig-name descname"><span class="pre">visitIf_stmt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.If_stmtContext" title="HybLangParser.HybLangParser.If_stmtContext"><span class="pre">HybLangParser.If_stmtContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitIf_stmt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitCall_prog_def">
+<span class="sig-name descname"><span class="pre">visitCall_prog_def</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Call_prog_defContext" title="HybLangParser.HybLangParser.Call_prog_defContext"><span class="pre">HybLangParser.Call_prog_defContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitCall_prog_def" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitExposing_sequence">
+<span class="sig-name descname"><span class="pre">visitExposing_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Exposing_sequenceContext" title="HybLangParser.HybLangParser.Exposing_sequenceContext"><span class="pre">HybLangParser.Exposing_sequenceContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitExposing_sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitLibrary_def">
+<span class="sig-name descname"><span class="pre">visitLibrary_def</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Library_defContext" title="HybLangParser.HybLangParser.Library_defContext"><span class="pre">HybLangParser.Library_defContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitLibrary_def" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitQuery_statement">
+<span class="sig-name descname"><span class="pre">visitQuery_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Query_statementContext" title="HybLangParser.HybLangParser.Query_statementContext"><span class="pre">HybLangParser.Query_statementContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitQuery_statement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitShow_query_statement">
+<span class="sig-name descname"><span class="pre">visitShow_query_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Show_query_statementContext" title="HybLangParser.HybLangParser.Show_query_statementContext"><span class="pre">HybLangParser.Show_query_statementContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitShow_query_statement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitWrite_query_statement">
+<span class="sig-name descname"><span class="pre">visitWrite_query_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Write_query_statementContext" title="HybLangParser.HybLangParser.Write_query_statementContext"><span class="pre">HybLangParser.Write_query_statementContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitWrite_query_statement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitQuery_relation">
+<span class="sig-name descname"><span class="pre">visitQuery_relation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Query_relationContext" title="HybLangParser.HybLangParser.Query_relationContext"><span class="pre">HybLangParser.Query_relationContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitQuery_relation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="HybLangVisitor.HybLangVisitor.visitQuery_expression">
+<span class="sig-name descname"><span class="pre">visitQuery_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../HybLangParser/index.html#HybLangParser.HybLangParser.Query_expressionContext" title="HybLangParser.HybLangParser.Query_expressionContext"><span class="pre">HybLangParser.Query_expressionContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HybLangVisitor.HybLangVisitor.visitQuery_expression" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">hybrid</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Iain Moncrief,Nick Burrell.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/autoapi/HybLangVisitor/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,18 @@
+:py:mod:`hybrid`
+================
+
+.. py:module:: hybrid
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   language/index.rst
+   latex/index.rst
+   parser/index.rst
+   syntax/index.rst
+
+

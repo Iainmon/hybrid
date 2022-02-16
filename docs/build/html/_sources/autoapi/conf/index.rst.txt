@@ -1,0 +1,69 @@
+:py:mod:`conf`
+==============
+
+.. py:module:: conf
+
+
+Module Contents
+---------------
+
+.. py:data:: project
+   :annotation: = hybrid
+
+   
+
+.. py:data:: copyright
+   :annotation: = 2022, Iain Moncrief,Nick Burrell
+
+   
+
+.. py:data:: author
+   :annotation: = Iain Moncrief,Nick Burrell
+
+   
+
+.. py:data:: release
+   :annotation: = 0.0.1
+
+   
+
+.. py:data:: extensions
+   :annotation: = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon', 'autoapi.extension']
+
+   
+
+.. py:data:: autoapi_type
+   :annotation: = python
+
+   
+
+.. py:data:: autoapi_dirs
+   :annotation: = ['../../']
+
+   
+
+.. py:data:: autoapi_ignore
+   :annotation: = ['*/parsing/*']
+
+   
+
+.. py:data:: templates_path
+   :annotation: = ['_templates']
+
+   
+
+.. py:data:: exclude_patterns
+   :annotation: = []
+
+   
+
+.. py:data:: html_theme
+   :annotation: = sphinx_book_theme
+
+   
+
+.. py:data:: html_static_path
+   :annotation: = ['_static']
+
+   
+

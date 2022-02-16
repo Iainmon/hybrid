@@ -1,0 +1,105 @@
+:py:mod:`HybLangVisitor`
+========================
+
+.. py:module:: HybLangVisitor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   HybLangVisitor.HybLangVisitor
+
+
+
+
+.. py:class:: HybLangVisitor
+
+   Bases: :py:obj:`antlr4.ParseTreeVisitor`
+
+   .. py:method:: visitProgram(self, ctx: HybLangParser.ProgramContext)
+
+
+   .. py:method:: visitBin_op(self, ctx: HybLangParser.Bin_opContext)
+
+
+   .. py:method:: visitIdentifier(self, ctx: HybLangParser.IdentifierContext)
+
+
+   .. py:method:: visitString_literal(self, ctx: HybLangParser.String_literalContext)
+
+
+   .. py:method:: visitFunction_call(self, ctx: HybLangParser.Function_callContext)
+
+
+   .. py:method:: visitExpression(self, ctx: HybLangParser.ExpressionContext)
+
+
+   .. py:method:: visitAssignment(self, ctx: HybLangParser.AssignmentContext)
+
+
+   .. py:method:: visitSample(self, ctx: HybLangParser.SampleContext)
+
+
+   .. py:method:: visitReturn_stmt(self, ctx: HybLangParser.Return_stmtContext)
+
+
+   .. py:method:: visitStatement(self, ctx: HybLangParser.StatementContext)
+
+
+   .. py:method:: visitProcedure(self, ctx: HybLangParser.ProcedureContext)
+
+
+   .. py:method:: visitNon_statement(self, ctx: HybLangParser.Non_statementContext)
+
+
+   .. py:method:: visitSet_lit(self, ctx: HybLangParser.Set_litContext)
+
+
+   .. py:method:: visitSet_type(self, ctx: HybLangParser.Set_typeContext)
+
+
+   .. py:method:: visitFunction_argument(self, ctx: HybLangParser.Function_argumentContext)
+
+
+   .. py:method:: visitFunction_arguments(self, ctx: HybLangParser.Function_argumentsContext)
+
+
+   .. py:method:: visitFunction_def(self, ctx: HybLangParser.Function_defContext)
+
+
+   .. py:method:: visitBlock(self, ctx: HybLangParser.BlockContext)
+
+
+   .. py:method:: visitIf_stmt(self, ctx: HybLangParser.If_stmtContext)
+
+
+   .. py:method:: visitCall_prog_def(self, ctx: HybLangParser.Call_prog_defContext)
+
+
+   .. py:method:: visitExposing_sequence(self, ctx: HybLangParser.Exposing_sequenceContext)
+
+
+   .. py:method:: visitLibrary_def(self, ctx: HybLangParser.Library_defContext)
+
+
+   .. py:method:: visitQuery_statement(self, ctx: HybLangParser.Query_statementContext)
+
+
+   .. py:method:: visitShow_query_statement(self, ctx: HybLangParser.Show_query_statementContext)
+
+
+   .. py:method:: visitWrite_query_statement(self, ctx: HybLangParser.Write_query_statementContext)
+
+
+   .. py:method:: visitQuery_relation(self, ctx: HybLangParser.Query_relationContext)
+
+
+   .. py:method:: visitQuery_expression(self, ctx: HybLangParser.Query_expressionContext)
+
+
+

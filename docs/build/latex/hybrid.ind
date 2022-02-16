@@ -1,0 +1,240 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{aggregateResult()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{5}
+  \item \spxentry{arg\_id}\spxextra{hybrid.syntax.FunctionArgument attribute}, \hyperpage{8}
+  \item \spxentry{arg\_type}\spxextra{hybrid.syntax.FunctionArgument attribute}, \hyperpage{8}
+  \item \spxentry{args}\spxextra{hybrid.syntax.FunctionArguments attribute}, \hyperpage{8}
+  \item \spxentry{args}\spxextra{hybrid.syntax.FunctionCall attribute}, \hyperpage{7}
+  \item \spxentry{args}\spxextra{hybrid.syntax.FunctionDefinition attribute}, \hyperpage{8}
+  \item \spxentry{Assignment}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{AST}\spxextra{class in hybrid.syntax}, \hyperpage{6}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{bin\_op}\spxextra{hybrid.syntax.BinaryOperation attribute}, \hyperpage{7}
+  \item \spxentry{bin\_op\_tex()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{BinaryOperation}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{Block}\spxextra{class in hybrid.syntax}, \hyperpage{6}
+  \item \spxentry{block}\spxextra{hybrid.syntax.FunctionDefinition attribute}, \hyperpage{8}
+  \item \spxentry{body}\spxextra{hybrid.syntax.CallingProgramDefinition attribute}, \hyperpage{8}
+  \item \spxentry{body}\spxextra{hybrid.syntax.Definitions attribute}, \hyperpage{7}
+  \item \spxentry{body}\spxextra{hybrid.syntax.LibraryDefinition attribute}, \hyperpage{8}
+  \item \spxentry{body}\spxextra{hybrid.syntax.Write attribute}, \hyperpage{9}
+  \item \spxentry{body}\spxextra{hybrid.syntax.WriteQueryStatement attribute}, \hyperpage{9}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{CallingProgramDefinition}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{condition}\spxextra{hybrid.syntax.IfStatement attribute}, \hyperpage{8}
+  \item \spxentry{construct\_ast()}\spxextra{in module hybrid.syntax}, \hyperpage{9}
+  \item \spxentry{context}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{copy\_context()}\spxextra{in module hybrid.parser}, \hyperpage{4}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{data}\spxextra{hybrid.syntax.SetLiteral attribute}, \hyperpage{8}
+  \item \spxentry{defaultResult()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{5}
+  \item \spxentry{definition\_calling\_programs()}\spxextra{in module hybrid.language}, 
+		\hyperpage{1}
+  \item \spxentry{definition\_libraries()}\spxextra{in module hybrid.language}, \hyperpage{1}
+  \item \spxentry{Definitions}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{depth}\spxextra{in module hybrid.latex}, \hyperpage{3}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{else\_block}\spxextra{hybrid.syntax.IfStatement attribute}, \hyperpage{8}
+  \item \spxentry{equiv()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{expand\_all\_derivations()}\spxextra{in module hybrid.parser}, \hyperpage{4}
+  \item \spxentry{exposing}\spxextra{hybrid.syntax.LibraryDefinition attribute}, \hyperpage{8}
+  \item \spxentry{Expression}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{expression}\spxextra{hybrid.latex.HighlightExpression attribute}, \hyperpage{2}
+  \item \spxentry{expression}\spxextra{hybrid.syntax.ShowQueryStatement attribute}, \hyperpage{9}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{file\_to\_ast\_dict()}\spxextra{in module hybrid.parser}, \hyperpage{5}
+  \item \spxentry{fun\_name}\spxextra{hybrid.syntax.FunctionCall attribute}, \hyperpage{7}
+  \item \spxentry{fun\_name}\spxextra{hybrid.syntax.FunctionDefinition attribute}, \hyperpage{8}
+  \item \spxentry{FunctionArgument}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{FunctionArguments}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{FunctionCall}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{FunctionDefinition}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{get\_children\_derivation\_names()}\spxextra{in module hybrid.parser}, 
+		\hyperpage{4}
+  \item \spxentry{get\_rule\_name()}\spxextra{in module hybrid.parser}, \hyperpage{4}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{HighlightExpression}\spxextra{class in hybrid.latex}, \hyperpage{2}
+  \item \spxentry{hybrid}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{hybrid.language}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{hybrid.latex}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{hybrid.parser}
+    \subitem \spxentry{module}, \hyperpage{3}
+  \item \spxentry{hybrid.syntax}
+    \subitem \spxentry{module}, \hyperpage{5}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{id}\spxextra{hybrid.syntax.Identifier attribute}, \hyperpage{7}
+  \item \spxentry{id}\spxextra{hybrid.syntax.IdentifierSetAtom attribute}, \hyperpage{8}
+  \item \spxentry{Identifier}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{IdentifierSetAtom}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{IfStatement}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{Indistinguishable}\spxextra{class in hybrid.latex}, \hyperpage{3}
+  \item \spxentry{Interchangable}\spxextra{class in hybrid.latex}, \hyperpage{2}
+  \item \spxentry{is\_in\_math\_block}\spxextra{in module hybrid.latex}, \hyperpage{3}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{lhs}\spxextra{hybrid.latex.Indistinguishable attribute}, \hyperpage{3}
+  \item \spxentry{lhs}\spxextra{hybrid.latex.Interchangable attribute}, \hyperpage{2}
+  \item \spxentry{lhs}\spxextra{hybrid.latex.Link attribute}, \hyperpage{2}
+  \item \spxentry{lhs}\spxextra{hybrid.syntax.Assignment attribute}, \hyperpage{7}
+  \item \spxentry{lhs}\spxextra{hybrid.syntax.BinaryOperation attribute}, \hyperpage{7}
+  \item \spxentry{lhs}\spxextra{hybrid.syntax.QueryRelation attribute}, \hyperpage{9}
+  \item \spxentry{lhs}\spxextra{hybrid.syntax.Sample attribute}, \hyperpage{7}
+  \item \spxentry{LibraryDefinition}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{LibraryReference}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+  \item \spxentry{Link}\spxextra{class in hybrid.latex}, \hyperpage{2}
+  \item \spxentry{link()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{Literal}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{module}
+    \subitem \spxentry{hybrid}, \hyperpage{1}
+    \subitem \spxentry{hybrid.language}, \hyperpage{1}
+    \subitem \spxentry{hybrid.latex}, \hyperpage{1}
+    \subitem \spxentry{hybrid.parser}, \hyperpage{3}
+    \subitem \spxentry{hybrid.syntax}, \hyperpage{5}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{name}\spxextra{hybrid.syntax.CallingProgramDefinition attribute}, \hyperpage{8}
+  \item \spxentry{name}\spxextra{hybrid.syntax.LibraryDefinition attribute}, \hyperpage{8}
+  \item \spxentry{name}\spxextra{hybrid.syntax.LibraryReference attribute}, \hyperpage{9}
+  \item \spxentry{name}\spxextra{hybrid.syntax.ProgramReference attribute}, \hyperpage{9}
+  \item \spxentry{non\_terminal\_children()}\spxextra{in module hybrid.parser}, \hyperpage{4}
+  \item \spxentry{NonStatement}\spxextra{class in hybrid.syntax}, \hyperpage{6}
+  \item \spxentry{NonTerminalName}\spxextra{in module hybrid.parser}, \hyperpage{4}
+  \item \spxentry{num}\spxextra{hybrid.syntax.Number attribute}, \hyperpage{7}
+  \item \spxentry{num}\spxextra{hybrid.syntax.NumberSetAtom attribute}, \hyperpage{8}
+  \item \spxentry{Number}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{NumberSetAtom}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{procedure}\spxextra{hybrid.syntax.Block attribute}, \hyperpage{6}
+  \item \spxentry{ProgramReference}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+
+  \indexspace
+  \bigletter Q
+  \item \spxentry{QueryExpression}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{QueryIdentifier}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{QueryRelation}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+  \item \spxentry{QueryStatement}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{RawSyntaxTreeVisitor}\spxextra{class in hybrid.parser}, \hyperpage{4}
+  \item \spxentry{Relation}\spxextra{class in hybrid.latex}, \hyperpage{2}
+  \item \spxentry{relation}\spxextra{hybrid.syntax.QueryRelation attribute}, \hyperpage{9}
+  \item \spxentry{ret}\spxextra{hybrid.syntax.Return attribute}, \hyperpage{7}
+  \item \spxentry{Return}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{rhs}\spxextra{hybrid.latex.Indistinguishable attribute}, \hyperpage{3}
+  \item \spxentry{rhs}\spxextra{hybrid.latex.Interchangable attribute}, \hyperpage{3}
+  \item \spxentry{rhs}\spxextra{hybrid.latex.Link attribute}, \hyperpage{2}
+  \item \spxentry{rhs}\spxextra{hybrid.syntax.Assignment attribute}, \hyperpage{7}
+  \item \spxentry{rhs}\spxextra{hybrid.syntax.BinaryOperation attribute}, \hyperpage{7}
+  \item \spxentry{rhs}\spxextra{hybrid.syntax.QueryRelation attribute}, \hyperpage{9}
+  \item \spxentry{rhs}\spxextra{hybrid.syntax.Sample attribute}, \hyperpage{7}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{Sample}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{save\_file()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{SetAtom}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{SetLiteral}\spxextra{class in hybrid.syntax}, \hyperpage{8}
+  \item \spxentry{ShowQueryStatement}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+  \item \spxentry{Statement}\spxextra{class in hybrid.syntax}, \hyperpage{6}
+  \item \spxentry{String}\spxextra{class in hybrid.syntax}, \hyperpage{7}
+  \item \spxentry{string}\spxextra{hybrid.syntax.String attribute}, \hyperpage{7}
+  \item \spxentry{Stylizer}\spxextra{class in hybrid.latex}, \hyperpage{2}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{texify()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{texify\_relation()}\spxextra{in module hybrid.latex}, \hyperpage{3}
+  \item \spxentry{then\_block}\spxextra{hybrid.syntax.IfStatement attribute}, \hyperpage{8}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{visitAssignment()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitBin\_op()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitBlock()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, \hyperpage{4}
+  \item \spxentry{visitCall\_prog\_def()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitExpression()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitFunction\_argument()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitFunction\_arguments()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitFunction\_call()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitFunction\_def()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitIf\_stmt()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitLibrary\_def()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitProcedure()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitProgram()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitQuery\_expression()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitQuery\_relation()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitQuery\_statement()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitReturn\_stmt()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitSample()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, \hyperpage{4}
+  \item \spxentry{visitSet\_lit()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitSet\_type()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitShow\_query\_statement()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitStatement()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitString\_literal()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{5}
+  \item \spxentry{visitTerminal()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{4}
+  \item \spxentry{visitWrite\_query\_statement()}\spxextra{hybrid.parser.RawSyntaxTreeVisitor method}, 
+		\hyperpage{5}
+
+  \indexspace
+  \bigletter W
+  \item \spxentry{Write}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+  \item \spxentry{WriteQueryStatement}\spxextra{class in hybrid.syntax}, \hyperpage{9}
+
+\end{sphinxtheindex}
