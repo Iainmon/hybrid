@@ -113,7 +113,9 @@ def texify(ast: AST,queries_only = True) -> str:
         case CallingProgramDefinition(name,Block(body)):
             context['program'][name] = CallingProgramDefinition(name,Block(body))
             body_source = '\\\\'.join(texify(line) for line in body)
-            return '\\titlecodebox{\\fancy{' + name + '} }{' + body_source + '}'
+            # return '\\titlecodebox{\\fancy{' + name + '} }{' + body_source + '}'
+            return '\\mfcodebox{' + body_source + '}'
+
         case LibraryDefinition(name,exposing,Block(body)):
             context['library'][name] = LibraryDefinition(name,exposing,Block(body))
             body_source = '\\\\'.join(texify(line) for line in body)
@@ -183,4 +185,8 @@ def save_file(tex_source,file):
     f.write(source)
     f.close()
     inputted_path = output_tex_file
-    os.system("cd ./tex; pdflatex %s" % inputted_path)
+    os.system(f'cd ./tex; pdflatex {inputted_path}; cd ..; mv ./tex/temp_out.pdf {file}')
+
+def save_png(tex_source,file):
+    save_file(tex_source,file + '.pdf')
+    os.system(f'convert -density 600 {file + ".pdf"} -quality 100 {file}')

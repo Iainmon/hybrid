@@ -1,0 +1,8 @@
+{
+    "argv": ["python", "-m",
+            "hybridkernel", "-f",
+            "{connection_file}"],
+    "display_name": "Hybrid",
+    "name": "Hybrid",
+    "language": "python"
+}

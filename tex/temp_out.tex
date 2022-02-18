@@ -1,4 +1,5 @@
-\documentclass[11pt]{article}
+% \documentclass[11pt]{article}
+\documentclass[preview]{standalone}
 
 \usepackage[utf8]{inputenc}
 
@@ -24,58 +25,6 @@
 %%%%
 
 
-\begin{document} \begin{align*}
-\titlecodebox{$\lib{cca-L}^{\Sigma'}$}{
-$(k_1,k_2) \lar \Sigma'.\KeyGen$\\
-$S := \varnothing$\\
-\underline{$\subname{eavesdrop}(m_L,m_R):$}\\
-\> if $|m_L| = |m_R|$:\\
-\> \> return $\str{err}$\\
-\> $(c_1,c_2) := \Sigma'.\Enc(m_L)$\\
-\> $S := S \cup \{(c_1,c_2)\}$\\
-\> return $(c_1,c_2)$\\
-\underline{$\subname{decrypt}((k_1,k_2),(c_1,c_2)):$}\\
-\> if $(c_1,c_2)\in S$:\\
-\> \> return $\str{err}$\\
-\> $m := \Sigma'.\Dec((k_1,k_2),(c_1,c_2))$\\
-\> return $m$
-}&\equiv
-\titlecodebox{$\lib{cca-L}^{\Sigma'}$}{
-$(k_1,k_2) \lar \Sigma'.\KeyGen$\\
-$S := \varnothing$\\\\
-\underline{$\subname{eavesdrop}(m_L,m_R):$}\\
-\> if $|m_L| = |m_R|$:\\
-\> \> return $\str{err}$\\
-\> $c_1 := \Sigma_1.\Enc(k_1,m_1)$\\
-\> $c_2 := \Sigma_2.\Enc(k_2,m_2)$\\
-\> $S := S \cup \{(c_1,c_2)\}$\\
-\> return $(c_1,c_2)$\\\\
-\underline{$\subname{decrypt}((k_1,k_2),(c_1,c_2)):$}\\
-\> if $(c_1,c_2)\in S$:\\
-\> \> return $\str{err}$\\
-\> $m_1 := \Sigma_1.\Dec(k_1,c_1)$\\
-\> $m_2 := \Sigma_2.\Dec(k_2,c_2)$\\
-\> if $m_1 \not\overset{?}{=} m_2$:\\
-\> \> return $\str{err}$\\
-\> return $m_1$
-}\equiv
-\titlecodebox{$\lib{cca-L}^{\Sigma'}$}{
-$(k_1,k_2) \slar \Sigma'.\KeyGen$\\
-$S := \varnothing$\\
-\underline{$\subname{eavesdrop}(m_L,m_R):$}\\
-\> if $|m_L| = |m_R|$:\\
-\> \> return $\str{err}$\\
-\> $c_1 := \Sigma_1.\Enc(k_1,m_1)$\\
-\> $c_2 := \Sigma_2.\Enc(k_2,m_2)$\\
-\> $S := S \cup \{(c_1,c_2)\}$\\
-\> return $(c_1,c_2)$\\
-\underline{$\subname{decrypt}((k_1,k_2),(c_1,c_2)):$}\\
-\> $m_1 := \Sigma_1.\Dec(k_1,c_1)$\\
-\> $m_2 := \Sigma_2.\Dec(k_2,c_2)$\\
-\> if $(c_1,c_2)\in S$ or $m_1 \overset{?}{\neq} m_2$:\\
-\> \> return $\str{err}$\\
-\> return $m_1$}
-\end{align*}
-
-
-\end{document}
+\begin{document} \begin{gather*}
+\mfcodebox{\subname{MyProgram}()}\link\titlecodebox{ \lib{Example} }{\underline{$\subname{MyProgram}():$}\\\> $x \lar \{\bit0,\bit1\}$\\\> if $x \overset{?}{=} \bit1$ then:\\\>\> return $\bit1$\\\> return $\bit0$}\equiv\mfcodebox{$x \lar \{\bit0,\bit1\}$\\if $x \overset{?}{=} \bit1$ then:\\\>\> return $\bit1$\\return $\bit0$}\equiv\mfcodebox{$x \lar \{\bit0,\bit1\}$\\return $z$}\end{gather*}
+. \end{document}

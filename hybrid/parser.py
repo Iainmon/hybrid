@@ -267,3 +267,14 @@ def file_to_ast_dict(file):
     visitor = RawSyntaxTreeVisitor()
     ast = visitor.visit(tree)
     return ast
+
+
+def source_to_ast_dict(source: str):
+    input_stream = InputStream(source)
+    lexer = HybLangLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    parser = HybLangParser(stream)
+    tree = parser.program()
+    visitor = RawSyntaxTreeVisitor()
+    ast = visitor.visit(tree)
+    return ast
