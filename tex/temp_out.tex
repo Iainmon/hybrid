@@ -9,7 +9,7 @@
 % \usepackage[a1paper, margin=4cm]{geometry}
 % \usepackage[a3paper, margin=2cm]{geometry}
 % \usepackage[a4paper]{geometry}
-\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[letterpaper, margin=0in]{geometry}
 \usepackage{mathtools}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
@@ -26,5 +26,5 @@
 
 
 \begin{document} \begin{gather*}
-\mfcodebox{\subname{MyProgram}()}\link\titlecodebox{ \lib{Example} }{\underline{$\subname{MyProgram}():$}\\\> $x \lar \{\bit0,\bit1\}$\\\> if $x \overset{?}{=} \bit1$ then:\\\>\> return $\bit1$\\\> return $\bit0$}\equiv\mfcodebox{$x \lar \{\bit0,\bit1\}$\\if $x \overset{?}{=} \bit1$ then:\\\>\> return $\bit1$\\return $\bit0$}\equiv\mfcodebox{$x \lar \{\bit0,\bit1\}$\\return $z$}\end{gather*}
-. \end{document}
+\titlecodebox{ \lib{pt} }{\underline{$\subname{attack}():$}\\\> $xa \lar \{\bit0,\bit1\}$\\\> $xb := H(xa)$\\\> $xc := H(xa || xb)$\\\> return $xc \overset{?}{=} H(xa || xb || xc)$}\end{gather*}
+ \end{document}

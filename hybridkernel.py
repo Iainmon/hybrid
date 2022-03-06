@@ -30,12 +30,12 @@ def _parse_function(code):
 
 
 class PlotKernel(Kernel):
-    implementation = "Plot"
+    implementation = "Hybrid"
     implementation_version = "1.0"
     language = "python"  # will be used for
     # syntax highlighting
     language_version = "3.6"
-    language_info = {"name": "plotter", "mimetype": "text/plain", "extension": ".py"}
+    language_info = {"name": "c", "mimetype": "text/plain", "extension": ".py"}
     banner = "Simple plotting"
 
     def do_execute(self, code, silent, store_history=True, user_expressions=None, allow_stdin=False):
@@ -54,23 +54,19 @@ class PlotKernel(Kernel):
         # png = _to_png(fig)
 
         parse_tree = parser.source_to_ast_dict(code)
-        # pprint(parse_tree)
-        print('\n\n------ Parse Tree Tree ------\n')
-        print(parse_tree)
-
 
         ast = syntax.construct_ast(parse_tree)
-        print('\n\n------ Abstract Syntax Tree ------\n')
-        pprint(ast)
 
         tex_source = latex.texify(syntax.Definitions(ast))
-        print('\n\n------ Latex Source ------\n')
-        print(tex_source)
-        latex.save_png(tex_source, 'tex/kernel_temp_out.png')
-        png_file = open("tex/kernel_temp_out.png", "rb")
-        encoded_string = urllib.parse.quote(base64.b64encode(png_file.read()))
+        # latex.save_png(tex_source, 'tex/kernel_temp_out.png')
+        # png_file = open("tex/kernel_temp_out.png", "rb")
+        # encoded_string = urllib.parse.quote(base64.b64encode(png_file.read()))
 
-        # convert -density 300 tex/temp_out.pdf -quality 90 tex/temp_out.png
+        latex.save_svg(tex_source, 'tex/kernel_temp_out.svg')
+        png_file = open("tex/kernel_temp_out.svg", "r")
+        svg_source = png_file.read()
+        # encoded_string = urllib.parse.quote(base64.b64encode(svg_source))
+
         if not silent:
             # We send the standard output to the
             # client.
@@ -92,10 +88,12 @@ class PlotKernel(Kernel):
                 # the output.
                 # "data": {"image/png": png},
                 # "data" : {'text/plain' : str(parse_tree)}
-                'data' : {'image/png': encoded_string}
+                # 'data' : {'image/png': encoded_string},
+                'data' : {'image/svg+xml': svg_source},
                 # We can specify the image size
                 # in the metadata field.
-                # "metadata": {"image/png": {"width": 600, "height": 400}},
+                # "metadata": {"image/png": {"width": '100%', "height": 'auto'}},
+                "metadata": {"image/svg+xml": {"width": '100%', "height": 'auto'}},
             }
 
             # We send the display_data message with

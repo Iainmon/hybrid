@@ -190,3 +190,10 @@ def save_file(tex_source,file):
 def save_png(tex_source,file):
     save_file(tex_source,file + '.pdf')
     os.system(f'convert -density 600 {file + ".pdf"} -quality 100 {file}')
+
+def save_svg(tex_source,file):
+    save_file(tex_source,file + '.pdf')
+    # os.system(f'inkscape -l {file + ".pdf"} {file}')
+
+    # os.system(f'inkscape --file={file + ".pdf"} --export-plain-svg={file}')
+    os.system(f'pdf2svg {file + ".pdf"} {file}')
