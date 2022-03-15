@@ -121,3 +121,6 @@ true = fmap S' $ true'
 false = fmap S' $ false'
 not'  =fmap S' $ Lam "x" (App (App (Lit "x") false') true')
 or'   =fmap S' $ (Lam "x" (Lam "y" (App (App (Lit "x") true') (Lit "y"))))
+
+
+
