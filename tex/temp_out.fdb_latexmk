@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1647466833 "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.tex" "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.pdf" "temp_out" 1647466864
-  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.aux" 1647466834 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.tex" 1647466832 905 7bad667dca52896b33eae930c33c3370 ""
-  "/dev/null" 1647466841 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1647497662 "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.tex" "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.pdf" "temp_out" 1647497662
+  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.aux" 1647497662 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.tex" 1647497660 1459 9100409ea1a6120cc7613d9bdfb137c0 ""
+  "/dev/null" 1647497661 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc" 1558300257 2905 926f570532f1104044846d18d8d97080 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -95,11 +95,11 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   "mikerosu.sty" 1645928228 5485 d22920815fc5547e00284f6516620cb9 ""
-  "temp_out.aux" 1647466834 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "temp_out.tex" 1647466832 905 7bad667dca52896b33eae930c33c3370 ""
+  "temp_out.aux" 1647497662 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "temp_out.tex" 1647497660 1459 9100409ea1a6120cc7613d9bdfb137c0 ""
   (generated)
-  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.log"
   "temp_out.pdf"
+  "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.log"
   "temp_out.log"
   "temp_out.aux"
   "/Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.pdf"

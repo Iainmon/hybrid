@@ -149,8 +149,8 @@ INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/sourcecodepro/SourceCodePro-Regular-tlf-t1.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/sourcecodepro/SourceCodePro-Regular-tlf-t1--base.tfm
 INPUT /Users/iainmoncrief/Documents/Github/HybridProofLanguage/tex/temp_out.aux
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
