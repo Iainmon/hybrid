@@ -25,6 +25,10 @@
 %%%%
 
 
-\begin{document} \begin{gather*}
-\titlecodebox{ \lib{pt} }{\underline{$\subname{attack}():$}\\\> $xa \lar \{\bit0,\bit1\}$\\\> $xb := H(xa)$\\\> $xc := H(xa || xb)$\\\> return $xc \overset{?}{=} H(xa || xb || xc)$}\end{gather*}
+\begin{document} In chapter 2, we proved \begin{gather*}
+\titlecodebox{ \lib{OTPReal} }{\underline{$\subname{eavesdrop}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c$}\equiv\titlecodebox{ \lib{OTPRand} }{\underline{$\subname{eavesdrop}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\end{gather*}
+With this fact, and from the definition of interchangability, we know that for all calling programs $\A$ \begin{gather*}
+\fancy{A}\link\titlecodebox{ \lib{OTPReal} }{\underline{$\subname{eavesdrop}(m \in \{\bit0,\bit1\}):$}\\\> $k \lar \{\bit0,\bit1\}$\\\> $c := k \oplus m$\\\> return $c$}\end{gather*}
+reduces to the same program as \begin{gather*}
+\fancy{A}\link\titlecodebox{ \lib{OTPRand} }{\underline{$\subname{eavesdrop}(m \in \{\bit0,\bit1\}):$}\\\> $c \lar \{\bit0,\bit1\}$\\\> return $c$}\end{gather*}
  \end{document}
