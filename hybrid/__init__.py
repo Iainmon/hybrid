@@ -3,7 +3,7 @@
 from . import parser
 from . import syntax
 from . import latex
-
+from . import visualization
 
 __all__ = ['parser','syntax','latex']
 # after = list(dir())

@@ -1,53 +1,91 @@
-from dataclasses import dataclass
-from typing import Any, Optional
+import dataclasses
+from dataclasses import dataclass, Field, MISSING, _FIELDS, _FIELD, _FIELD_INITVAR  # type: ignore
+import dataclasses as dc
 
-"""
-his 
-"""
+from typing import Any, Optional, Type, TypeVar, List, Dict
 
 
-class AST():
+Data = Dict[str, Any]
+T = TypeVar("T", bound=Any)
+
+def get_fields(data_class: Type[T]) -> List[Field]:
+    fields = getattr(data_class, _FIELDS)
+    return [f for f in fields.values() if f._field_type is _FIELD or f._field_type is _FIELD_INITVAR]
+
+
+@dataclass(frozen=True,eq=True)
+class CompositeDict():
+    def __hash__(self):
+        return hash(str(repr(self)))
+    def as_dict(self,named_args=True):
+        classtype = type(self)
+        if not dc.is_dataclass(classtype):
+            raise TypeError(f"Expected dataclass instance, got '{classtype!r}' object")
+        name = classtype.__qualname__
+        children = dict()
+        for key, value in self.__dict__.items():
+            if key in self.__dataclass_fields__.keys():
+                if type(value) is list:
+                    children[key] = [item.as_dict(named_args=named_args) for item in value]
+                elif dc.is_dataclass(value):
+                    if not hasattr(value,'as_dict'):
+                        raise TypeError(f"Expected CompositeDict instance, got '{type(value)!r}' object")
+                    children[key] = value.as_dict(named_args=named_args)
+                else:
+                    children[key] = value
+        if not named_args:
+            return { name : tuple(children.values())}
+        return { name : children }
+    def children(self,named=True):
+        children = list(self.as_dict().values())[0]
+        return [getattr(self,c) for c in children]
+        
+@dataclass(frozen=True,eq=True)
+class AST(CompositeDict):
     pass
+@dataclass(frozen=True,eq=True)
 class Statement(AST):
     pass
+@dataclass(frozen=True,eq=True)
 class NonStatement(AST):
     pass
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Block(AST):
     procedure : list[Statement | NonStatement]
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Definitions(AST):
     body : Block
 
 
 # -------- Expression (start) --------
+@dataclass(frozen=True,eq=True)
 class Expression(Statement):
     pass
-
+@dataclass(frozen=True,eq=True)
 class Literal(Expression):
     pass
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Identifier(Literal):
     id : str
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Number(Literal):
     num : int
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class String(Literal):
     string : str
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class BinaryOperation(Expression):
     lhs : Expression
     bin_op : str
     rhs : Expression
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class FunctionCall(Expression):
     fun_name : str
     args : list[Expression]
@@ -57,61 +95,61 @@ class FunctionCall(Expression):
 
 
 # -------- Statement (start) --------
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Assignment(Statement):
     lhs : Identifier
     rhs : Expression
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Sample(Statement):
     lhs : Identifier
     rhs : Expression | Any
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Return(Statement):
     ret : Expression
 # -------- Statement (end) --------
-
+@dataclass(frozen=True,eq=True)
 class SetAtom(AST):
     pass
-@dataclass
+@dataclass(frozen=True,eq=True)
 class NumberSetAtom(SetAtom):
     num : int
-@dataclass
+@dataclass(frozen=True,eq=True)
 class IdentifierSetAtom(SetAtom):
     id : str
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class SetLiteral(AST):
     data : list[SetAtom]
 
 # -------- NonStatement (start) --------
-@dataclass
+@dataclass(frozen=True,eq=True)
 class FunctionArgument(AST):
     arg_id : str
     arg_type : Optional[SetLiteral]
-@dataclass
+@dataclass(frozen=True,eq=True)
 class FunctionArguments(AST):
     args : list[tuple[int, FunctionArgument]]
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class FunctionDefinition(NonStatement):
     fun_name : str
     args : FunctionArguments
     block : Block
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class IfStatement(NonStatement):
     condition : Expression
     then_block : Block
     else_block : Optional[Block]
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class CallingProgramDefinition(NonStatement):
     name : str
     body : Block
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class LibraryDefinition(NonStatement):
     name : str
     exposing : list[tuple[str,str]]
@@ -119,37 +157,37 @@ class LibraryDefinition(NonStatement):
 
 # -------- NonStatement (end) --------
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class QueryExpression(AST):
     pass
-@dataclass
+@dataclass(frozen=True,eq=True)
 class QueryIdentifier(QueryExpression):
     pass
-@dataclass
+@dataclass(frozen=True,eq=True)
 class QueryStatement(NonStatement):
     pass
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class ProgramReference(QueryIdentifier):
     name : str
-@dataclass
+@dataclass(frozen=True,eq=True)
 class LibraryReference(QueryIdentifier):
     name : str
-@dataclass
+@dataclass(frozen=True,eq=True)
 class QueryRelation(QueryExpression):
     lhs : QueryExpression
     relation : str 
     rhs : QueryExpression
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Write(QueryExpression):
     body : String 
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class ShowQueryStatement(QueryStatement):
     expression : QueryExpression
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class WriteQueryStatement(QueryStatement):
     body : Write
 

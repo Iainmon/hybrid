@@ -4,26 +4,26 @@ import os
 import tempfile
 from dataclasses import dataclass
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Stylizer(AST):
     pass
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Relation(Stylizer):
     pass
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class HighlightExpression(Stylizer):
     expression : AST
 
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Link(Relation):
     lhs : AST
     rhs : AST
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Interchangable(Relation):
     lhs : AST
     rhs : AST
-@dataclass
+@dataclass(frozen=True,eq=True)
 class Indistinguishable(Relation):
     lhs : AST
     rhs : AST

@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=TD]
+	node [colorscheme=spectral11 shape=square style=filled]
+	edge [arrowhead=none]
+	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" [label=Block color=8 shape=circle]
+	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" [label=FunctionDefinition color=8 shape=circle]
+	a [label=a color=8 shape=circle]
+	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> a
+	"FunctionArguments(args=[])" [label=FunctionArguments color=8 shape=circle]
+	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> "FunctionArguments(args=[])"
+	"Block(procedure=[Return(ret=Number(num=1))])" [label=Block color=8 shape=circle]
+	"Block(procedure=[Return(ret=Number(num=1))])" [label=Return color=8 shape=circle]
+	"Number(num=1)" [label=Number color=8 shape=circle]
+	1 [label=1 color=8 shape=circle]
+	"Number(num=1)" -> 1
+	"Block(procedure=[Return(ret=Number(num=1))])" -> "Number(num=1)"
+	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> "Block(procedure=[Return(ret=Number(num=1))])"
+}
