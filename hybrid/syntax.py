@@ -12,9 +12,24 @@ def get_fields(data_class: Type[T]) -> List[Field]:
     fields = getattr(data_class, _FIELDS)
     return [f for f in fields.values() if f._field_type is _FIELD or f._field_type is _FIELD_INITVAR]
 
+@dataclass(frozen=True,eq=True)
+class GenericDataClass():
+
+    def get_fields(self):
+        return get_fields(type(self))
+
+    def children(self,named=True):
+        children = self.get_fields()
+        if not named:
+            return [getattr(self,c.name) for c in children]
+        return {c.name : getattr(self,c.name) for c in children}
+        
+    def get_name(self):
+        return type(self).__qualname__
+
 
 @dataclass(frozen=True,eq=True)
-class CompositeDict():
+class CompositeDict(GenericDataClass):
     def __hash__(self):
         return hash(str(repr(self)))
     def as_dict(self,named_args=True):
@@ -26,20 +41,19 @@ class CompositeDict():
         for key, value in self.__dict__.items():
             if key in self.__dataclass_fields__.keys():
                 if type(value) is list:
-                    children[key] = [item.as_dict(named_args=named_args) for item in value]
+                    children[key] = [(item.as_dict(named_args=named_args) if dc.is_dataclass(item) else item) for item in value]
                 elif dc.is_dataclass(value):
                     if not hasattr(value,'as_dict'):
                         raise TypeError(f"Expected CompositeDict instance, got '{type(value)!r}' object")
+                    
                     children[key] = value.as_dict(named_args=named_args)
                 else:
                     children[key] = value
         if not named_args:
             return { name : tuple(children.values())}
         return { name : children }
-    def children(self,named=True):
-        children = list(self.as_dict().values())[0]
-        return [getattr(self,c) for c in children]
-        
+    
+
 @dataclass(frozen=True,eq=True)
 class AST(CompositeDict):
     pass

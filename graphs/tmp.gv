@@ -2,17 +2,69 @@ digraph {
 	graph [rankdir=TD]
 	node [colorscheme=spectral11 shape=square style=filled]
 	edge [arrowhead=none]
-	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" [label=Block color=8 shape=circle]
-	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" [label=FunctionDefinition color=8 shape=circle]
-	a [label=a color=8 shape=circle]
-	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> a
-	"FunctionArguments(args=[])" [label=FunctionArguments color=8 shape=circle]
-	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> "FunctionArguments(args=[])"
-	"Block(procedure=[Return(ret=Number(num=1))])" [label=Block color=8 shape=circle]
-	"Block(procedure=[Return(ret=Number(num=1))])" [label=Return color=8 shape=circle]
-	"Number(num=1)" [label=Number color=8 shape=circle]
-	1 [label=1 color=8 shape=circle]
-	"Number(num=1)" -> 1
-	"Block(procedure=[Return(ret=Number(num=1))])" -> "Number(num=1)"
-	"Block(procedure=[FunctionDefinition(fun_name='a', args=FunctionArguments(args=[]), block=Block(procedure=[Return(ret=Number(num=1))]))])" -> "Block(procedure=[Return(ret=Number(num=1))])"
+	"Block(procedure=[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))])" [label=Block color=8 shape=circle]
+	"Block(procedure=[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))])" -> "Block(procedure=[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))])"
+	"[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]" [label=FunctionDefinition color=8 shape=circle]
+	"[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]" -> "[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]"
+	2 [label=ctxt color=8 shape=circle]
+	"[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]" -> ctxt
+	"FunctionArguments(args=[(0, Identifier(id='m'))])" [label=FunctionArguments color=8 shape=circle]
+	"FunctionArguments(args=[(0, Identifier(id='m'))])" -> "FunctionArguments(args=[(0, Identifier(id='m'))])"
+	"[(0, Identifier(id='m'))]" [label="(0, Identi" color=8 shape=circle]
+	"[(0, Identifier(id='m'))]" -> "[(0, Identifier(id='m'))]"
+	"FunctionArguments(args=[(0, Identifier(id='m'))])" -> "[(0, Identifier(id='m'))]"
+	"[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]" -> "FunctionArguments(args=[(0, Identifier(id='m'))])"
+	"Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))])" [label=Block color=8 shape=circle]
+	"Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))])" -> "Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))])"
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" [label=Sample color=8 shape=circle]
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]"
+	"Identifier(id='k')" [label=Identifier color=8 shape=circle]
+	"Identifier(id='k')" -> "Identifier(id='k')"
+	8 [label=k color=8 shape=circle]
+	"Identifier(id='k')" -> k
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "Identifier(id='k')"
+	"SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])" [label=SetLiteral color=8 shape=circle]
+	"SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])" -> "SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])"
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" [label=NumberSetAtom color=8 shape=circle]
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" -> "[NumberSetAtom(num=0), NumberSetAtom(num=1)]"
+	11 [label=0 color=8 shape=circle]
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" -> 0
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" [label=NumberSetAtom color=8 shape=circle]
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" -> "[NumberSetAtom(num=0), NumberSetAtom(num=1)]"
+	13 [label=1 color=8 shape=circle]
+	"[NumberSetAtom(num=0), NumberSetAtom(num=1)]" -> 1
+	"SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])" -> "[NumberSetAtom(num=0), NumberSetAtom(num=1)]"
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])"
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" [label=Assignment color=8 shape=circle]
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]"
+	"Identifier(id='c')" [label=Identifier color=8 shape=circle]
+	"Identifier(id='c')" -> "Identifier(id='c')"
+	16 [label=c color=8 shape=circle]
+	"Identifier(id='c')" -> c
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "Identifier(id='c')"
+	"BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))" [label=BinaryOperation color=8 shape=circle]
+	"BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))" -> "BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))"
+	"Identifier(id='k')" [label=Identifier color=8 shape=circle]
+	"Identifier(id='k')" -> "Identifier(id='k')"
+	19 [label=k color=8 shape=circle]
+	"Identifier(id='k')" -> k
+	"BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))" -> "Identifier(id='k')"
+	20 [label=xor color=8 shape=circle]
+	"BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))" -> xor
+	"Identifier(id='m')" [label=Identifier color=8 shape=circle]
+	"Identifier(id='m')" -> "Identifier(id='m')"
+	22 [label=m color=8 shape=circle]
+	"Identifier(id='m')" -> m
+	"BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))" -> "Identifier(id='m')"
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))"
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" [label=Return color=8 shape=circle]
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]"
+	"Identifier(id='c')" [label=Identifier color=8 shape=circle]
+	"Identifier(id='c')" -> "Identifier(id='c')"
+	25 [label=c color=8 shape=circle]
+	"Identifier(id='c')" -> c
+	"[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]" -> "Identifier(id='c')"
+	"Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))])" -> "[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]"
+	"[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]" -> "Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))])"
+	"Block(procedure=[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))])" -> "[FunctionDefinition(fun_name='ctxt', args=FunctionArguments(args=[(0, Identifier(id='m'))]), block=Block(procedure=[Sample(lhs=Identifier(id='k'), rhs=SetLiteral(data=[NumberSetAtom(num=0), NumberSetAtom(num=1)])), Assignment(lhs=Identifier(id='c'), rhs=BinaryOperation(lhs=Identifier(id='k'), bin_op='xor', rhs=Identifier(id='m'))), Return(ret=Identifier(id='c'))]))]"
 }

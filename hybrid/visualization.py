@@ -59,36 +59,47 @@ def get_name(instance):
 
 def construct_ast_graph(ast : AST,d=0):
     graph = new_graph()# gv.Graph()
+    nodes = []
+    def construct_graphviz_graph(tree,par_idx = None,d=1):
 
-    def construct_graphviz_graph(tree,par_idx = None):
-        print(par_idx)
-        print(tree)
+        print(tree if not dc.is_dataclass(tree) else tree.get_name(),d)
+
+
+        if type(tree) is list:
+            for child in tree:
+                construct_graphviz_graph(child,par_idx,d+1)
+            return None
+
+        par_name = str(tree)[0:10] if not dc.is_dataclass(tree) else tree.get_name() # list(tree.as_dict().keys())[0]
+        # par_idx = str(tree) if not (type(par_idx) is str and par_idx != '') else par_idx
         
-        par_name = str(tree) if not dc.is_dataclass(tree) else get_name(tree) # list(tree.as_dict().keys())[0]
-        par_idx = str(tree) if not (type(par_idx) is str and par_idx != '') else par_idx
-        graph.node(par_idx, label=par_name, shape='circle', color='8')
-        
+        par_idx = par_idx or (str(d) if not dc.is_dataclass(tree) else str(tree))
+        n_par_idx = str(len(nodes)) if type(tree) is int or type(tree) is str else par_idx
+
+        graph.node(n_par_idx, label=par_name, shape='circle', color='8')
+        nodes.append(n_par_idx)
+        if not (type(tree) is int or type(tree) is str):
+            graph.edge(par_idx,n_par_idx)
+
         if not dc.is_dataclass(tree):
             return None
 
-        for c in tree.children():
-            if type(c) is list:
-                for c_ in c:
-                    construct_graphviz_graph(c_,par_idx)
-            else:
-                child_idx = str(c)
-                construct_graphviz_graph(c,child_idx)
-                graph.edge(par_idx,child_idx)
+        assert dc.is_dataclass(tree) and hasattr(tree,'children')
+
+        for c in tree.children(named=False):
+            child_idx = str(c)
+            construct_graphviz_graph(c,child_idx,d+1)
+            graph.edge(par_idx,child_idx)
         return None
-    serialized = ast.as_dict(named_args=True)
+    # serialized = ast.as_dict(named_args=True)
     # print(serialized)
-    construct_graphviz_graph(ast,None)
+    construct_graphviz_graph(ast,None,0)
     show_graph(graph)
 
     # # node = gd.node(d, label=str(ast), shape='square', color='8')
     
 print('-------------------------')
-parse_tree = source_to_ast_dict('rout a() : {return 1;}')
+parse_tree = source_to_ast_dict('rout ctxt(m) : {k <- {0,1}; c := k xor m; return c;}')
 print(parse_tree)
 print('-------------------------')
 ast = construct_ast(parse_tree)
@@ -98,7 +109,7 @@ ast_dict = serialize_tree(ast)
 print(ast_dict)
 print('-------------------------')
 construct_ast_graph(ast)
-
+print(ast.as_dict())
 
 def lambdagraph(g: gv.Graph,ast: AST):
     nodes = []
